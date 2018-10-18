@@ -1,0 +1,59 @@
+
+tmp/IDT.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <InitIdt>:
+   0:	8b 54 24 04          	mov    edx,DWORD PTR [esp+0x4]
+   4:	8b 4c 24 08          	mov    ecx,DWORD PTR [esp+0x8]
+   8:	0f b6 44 24 10       	movzx  eax,BYTE PTR [esp+0x10]
+   d:	66 89 0a             	mov    WORD PTR [edx],cx
+  10:	c1 e9 10             	shr    ecx,0x10
+  13:	66 89 4a 06          	mov    WORD PTR [edx+0x6],cx
+  17:	8b 4c 24 0c          	mov    ecx,DWORD PTR [esp+0xc]
+  1b:	83 e0 03             	and    eax,0x3
+  1e:	c1 e0 05             	shl    eax,0x5
+  21:	83 c8 8e             	or     eax,0xffffff8e
+  24:	c6 42 04 00          	mov    BYTE PTR [edx+0x4],0x0
+  28:	66 89 4a 02          	mov    WORD PTR [edx+0x2],cx
+  2c:	88 42 05             	mov    BYTE PTR [edx+0x5],al
+  2f:	c3                   	ret    
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 10                	add    BYTE PTR [eax],dl
+  19:	00 00                	add    BYTE PTR [eax],al
+  1b:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	30 00                	xor    BYTE PTR [eax],al
+  26:	00 00                	add    BYTE PTR [eax],al
+  28:	00 00                	add    BYTE PTR [eax],al
+	...

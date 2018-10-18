@@ -1,0 +1,953 @@
+
+tmp/Keyboard.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <GetKeyCodeFromScanCode>:
+   0:	83 ec 0c             	sub    esp,0xc
+   3:	b9 01 00 00 00       	mov    ecx,0x1
+   8:	0f b6 54 24 10       	movzx  edx,BYTE PTR [esp+0x10]
+   d:	89 74 24 04          	mov    DWORD PTR [esp+0x4],esi
+  11:	0f b6 74 24 18       	movzx  esi,BYTE PTR [esp+0x18]
+  16:	89 7c 24 08          	mov    DWORD PTR [esp+0x8],edi
+  1a:	0f b6 7c 24 14       	movzx  edi,BYTE PTR [esp+0x14]
+  1f:	89 1c 24             	mov    DWORD PTR [esp],ebx
+  22:	84 d2                	test   dl,dl
+  24:	78 32                	js     58 <GetKeyCodeFromScanCode+0x58>
+  26:	89 f3                	mov    ebx,esi
+  28:	b8 91 00 00 00       	mov    eax,0x91
+  2d:	84 db                	test   bl,bl
+  2f:	75 0d                	jne    3e <GetKeyCodeFromScanCode+0x3e>
+  31:	0f b6 c2             	movzx  eax,dl
+  34:	89 fb                	mov    ebx,edi
+  36:	8d 50 3d             	lea    edx,[eax+0x3d]
+  39:	84 db                	test   bl,bl
+  3b:	0f 45 c2             	cmovne eax,edx
+  3e:	89 c2                	mov    edx,eax
+  40:	8b 1c 24             	mov    ebx,DWORD PTR [esp]
+  43:	80 ce 01             	or     dh,0x1
+  46:	84 c9                	test   cl,cl
+  48:	8b 74 24 04          	mov    esi,DWORD PTR [esp+0x4]
+  4c:	0f 44 c2             	cmove  eax,edx
+  4f:	8b 7c 24 08          	mov    edi,DWORD PTR [esp+0x8]
+  53:	83 c4 0c             	add    esp,0xc
+  56:	c3                   	ret    
+  57:	90                   	nop
+  58:	83 e2 7f             	and    edx,0x7f
+  5b:	31 c9                	xor    ecx,ecx
+  5d:	eb c7                	jmp    26 <GetKeyCodeFromScanCode+0x26>
+  5f:	90                   	nop
+
+00000060 <GetClubcos0AsciiFromKeyCode>:
+  60:	53                   	push   ebx
+  61:	83 ec 28             	sub    esp,0x28
+  64:	0f b6 44 24 30       	movzx  eax,BYTE PTR [esp+0x30]
+  69:	0f b7 d0             	movzx  edx,ax
+  6c:	83 e8 47             	sub    eax,0x47
+  6f:	8d 14 52             	lea    edx,[edx+edx*2]
+  72:	66 83 f8 0c          	cmp    ax,0xc
+  76:	0f b6 8a 00 00 00 00 	movzx  ecx,BYTE PTR [edx+0x0]
+  7d:	0f b6 9a 01 00 00 00 	movzx  ebx,BYTE PTR [edx+0x1]
+  84:	77 12                	ja     98 <GetClubcos0AsciiFromKeyCode+0x38>
+  86:	80 3d 00 00 00 00 00 	cmp    BYTE PTR ds:0x0,0x0
+  8d:	0f 44 d9             	cmove  ebx,ecx
+  90:	83 c4 28             	add    esp,0x28
+  93:	89 d8                	mov    eax,ebx
+  95:	5b                   	pop    ebx
+  96:	c3                   	ret    
+  97:	90                   	nop
+  98:	0f b6 c1             	movzx  eax,cl
+  9b:	89 04 24             	mov    DWORD PTR [esp],eax
+  9e:	88 4c 24 1c          	mov    BYTE PTR [esp+0x1c],cl
+  a2:	e8 fc ff ff ff       	call   a3 <GetClubcos0AsciiFromKeyCode+0x43>
+  a7:	0f b6 4c 24 1c       	movzx  ecx,BYTE PTR [esp+0x1c]
+  ac:	85 c0                	test   eax,eax
+  ae:	74 18                	je     c8 <GetClubcos0AsciiFromKeyCode+0x68>
+  b0:	80 3d 01 00 00 00 00 	cmp    BYTE PTR ds:0x1,0x0
+  b7:	74 0f                	je     c8 <GetClubcos0AsciiFromKeyCode+0x68>
+  b9:	80 3d 03 00 00 00 00 	cmp    BYTE PTR ds:0x3,0x0
+  c0:	0f 45 d9             	cmovne ebx,ecx
+  c3:	eb cb                	jmp    90 <GetClubcos0AsciiFromKeyCode+0x30>
+  c5:	8d 76 00             	lea    esi,[esi+0x0]
+  c8:	80 3d 03 00 00 00 00 	cmp    BYTE PTR ds:0x3,0x0
+  cf:	0f 44 d9             	cmove  ebx,ecx
+  d2:	83 c4 28             	add    esp,0x28
+  d5:	89 d8                	mov    eax,ebx
+  d7:	5b                   	pop    ebx
+  d8:	c3                   	ret    
+  d9:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+
+000000e0 <IsAsciiCode>:
+  e0:	0f b6 44 24 04       	movzx  eax,BYTE PTR [esp+0x4]
+  e5:	f7 d0                	not    eax
+  e7:	c0 e8 07             	shr    al,0x7
+  ea:	c3                   	ret    
+  eb:	90                   	nop
+  ec:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+
+000000f0 <IsDownKey>:
+  f0:	0f b7 44 24 04       	movzx  eax,WORD PTR [esp+0x4]
+  f5:	66 c1 e8 08          	shr    ax,0x8
+  f9:	83 f0 01             	xor    eax,0x1
+  fc:	83 e0 01             	and    eax,0x1
+  ff:	c3                   	ret    
+
+00000100 <WaitKeyboardInputBuffer>:
+ 100:	53                   	push   ebx
+ 101:	bb ff ff 00 00       	mov    ebx,0xffff
+ 106:	83 ec 18             	sub    esp,0x18
+ 109:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 110:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 117:	e8 fc ff ff ff       	call   118 <WaitKeyboardInputBuffer+0x18>
+ 11c:	a8 02                	test   al,0x2
+ 11e:	75 08                	jne    128 <WaitKeyboardInputBuffer+0x28>
+ 120:	83 c4 18             	add    esp,0x18
+ 123:	5b                   	pop    ebx
+ 124:	c3                   	ret    
+ 125:	8d 76 00             	lea    esi,[esi+0x0]
+ 128:	83 eb 01             	sub    ebx,0x1
+ 12b:	75 e3                	jne    110 <WaitKeyboardInputBuffer+0x10>
+ 12d:	8d 76 00             	lea    esi,[esi+0x0]
+ 130:	eb ee                	jmp    120 <WaitKeyboardInputBuffer+0x20>
+ 132:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 139:	8d bc 27 00 00 00 00 	lea    edi,[edi+eiz*1+0x0]
+
+00000140 <WaitKeyboardOutputBuffer>:
+ 140:	53                   	push   ebx
+ 141:	bb ff ff 00 00       	mov    ebx,0xffff
+ 146:	83 ec 18             	sub    esp,0x18
+ 149:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 150:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 157:	e8 fc ff ff ff       	call   158 <WaitKeyboardOutputBuffer+0x18>
+ 15c:	a8 01                	test   al,0x1
+ 15e:	75 08                	jne    168 <WaitKeyboardOutputBuffer+0x28>
+ 160:	83 c4 18             	add    esp,0x18
+ 163:	5b                   	pop    ebx
+ 164:	c3                   	ret    
+ 165:	8d 76 00             	lea    esi,[esi+0x0]
+ 168:	83 eb 01             	sub    ebx,0x1
+ 16b:	75 e3                	jne    150 <WaitKeyboardOutputBuffer+0x10>
+ 16d:	8d 76 00             	lea    esi,[esi+0x0]
+ 170:	eb ee                	jmp    160 <WaitKeyboardOutputBuffer+0x20>
+ 172:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 179:	8d bc 27 00 00 00 00 	lea    edi,[edi+eiz*1+0x0]
+
+00000180 <WaitKeyboardACK>:
+ 180:	56                   	push   esi
+ 181:	be 64 00 00 00       	mov    esi,0x64
+ 186:	53                   	push   ebx
+ 187:	83 ec 14             	sub    esp,0x14
+ 18a:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 190:	bb ff ff 00 00       	mov    ebx,0xffff
+ 195:	8d 76 00             	lea    esi,[esi+0x0]
+ 198:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 19f:	e8 fc ff ff ff       	call   1a0 <WaitKeyboardACK+0x20>
+ 1a4:	a8 01                	test   al,0x1
+ 1a6:	75 08                	jne    1b0 <WaitKeyboardACK+0x30>
+ 1a8:	83 eb 01             	sub    ebx,0x1
+ 1ab:	75 eb                	jne    198 <WaitKeyboardACK+0x18>
+ 1ad:	8d 76 00             	lea    esi,[esi+0x0]
+ 1b0:	c7 04 24 60 00 00 00 	mov    DWORD PTR [esp],0x60
+ 1b7:	e8 fc ff ff ff       	call   1b8 <WaitKeyboardACK+0x38>
+ 1bc:	3c fa                	cmp    al,0xfa
+ 1be:	0f 84 b3 00 00 00    	je     277 <WaitKeyboardACK+0xf7>
+ 1c4:	80 3d 04 00 00 00 00 	cmp    BYTE PTR ds:0x4,0x0
+ 1cb:	74 1b                	je     1e8 <WaitKeyboardACK+0x68>
+ 1cd:	83 2d 08 00 00 00 01 	sub    DWORD PTR ds:0x8,0x1
+ 1d4:	74 63                	je     239 <WaitKeyboardACK+0xb9>
+ 1d6:	83 ee 01             	sub    esi,0x1
+ 1d9:	75 b5                	jne    190 <WaitKeyboardACK+0x10>
+ 1db:	83 c4 14             	add    esp,0x14
+ 1de:	31 c0                	xor    eax,eax
+ 1e0:	5b                   	pop    ebx
+ 1e1:	5e                   	pop    esi
+ 1e2:	c3                   	ret    
+ 1e3:	90                   	nop
+ 1e4:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 1e8:	80 3d 0c 00 00 00 00 	cmp    BYTE PTR ds:0xc,0x0
+ 1ef:	74 2f                	je     220 <WaitKeyboardACK+0xa0>
+ 1f1:	0f b6 d0             	movzx  edx,al
+ 1f4:	83 c2 3d             	add    edx,0x3d
+ 1f7:	84 c0                	test   al,al
+ 1f9:	c6 05 0c 00 00 00 00 	mov    BYTE PTR ds:0xc,0x0
+ 200:	78 54                	js     256 <WaitKeyboardACK+0xd6>
+ 202:	0f b7 c2             	movzx  eax,dx
+ 205:	0d 00 00 00 02       	or     eax,0x2000000
+ 20a:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+ 20e:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 215:	e8 fc ff ff ff       	call   216 <WaitKeyboardACK+0x96>
+ 21a:	eb ba                	jmp    1d6 <WaitKeyboardACK+0x56>
+ 21c:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 220:	3c e1                	cmp    al,0xe1
+ 222:	74 3d                	je     261 <WaitKeyboardACK+0xe1>
+ 224:	3c e0                	cmp    al,0xe0
+ 226:	74 5a                	je     282 <WaitKeyboardACK+0x102>
+ 228:	84 c0                	test   al,al
+ 22a:	0f b6 d0             	movzx  edx,al
+ 22d:	79 d3                	jns    202 <WaitKeyboardACK+0x82>
+ 22f:	89 c2                	mov    edx,eax
+ 231:	83 e2 7f             	and    edx,0x7f
+ 234:	80 ce 01             	or     dh,0x1
+ 237:	eb c9                	jmp    202 <WaitKeyboardACK+0x82>
+ 239:	c7 44 24 04 91 00 00 	mov    DWORD PTR [esp+0x4],0x2000091
+ 240:	02 
+ 241:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 248:	c6 05 04 00 00 00 00 	mov    BYTE PTR ds:0x4,0x0
+ 24f:	e8 fc ff ff ff       	call   250 <WaitKeyboardACK+0xd0>
+ 254:	eb 80                	jmp    1d6 <WaitKeyboardACK+0x56>
+ 256:	83 e0 7f             	and    eax,0x7f
+ 259:	8d 50 3d             	lea    edx,[eax+0x3d]
+ 25c:	80 ce 01             	or     dh,0x1
+ 25f:	eb a1                	jmp    202 <WaitKeyboardACK+0x82>
+ 261:	c6 05 04 00 00 00 01 	mov    BYTE PTR ds:0x4,0x1
+ 268:	c7 05 08 00 00 00 02 	mov    DWORD PTR ds:0x8,0x2
+ 26f:	00 00 00 
+ 272:	e9 5f ff ff ff       	jmp    1d6 <WaitKeyboardACK+0x56>
+ 277:	83 c4 14             	add    esp,0x14
+ 27a:	b8 01 00 00 00       	mov    eax,0x1
+ 27f:	5b                   	pop    ebx
+ 280:	5e                   	pop    esi
+ 281:	c3                   	ret    
+ 282:	c6 05 0c 00 00 00 01 	mov    BYTE PTR ds:0xc,0x1
+ 289:	e9 48 ff ff ff       	jmp    1d6 <WaitKeyboardACK+0x56>
+ 28e:	66 90                	xchg   ax,ax
+
+00000290 <UpdateKeyboardLED>:
+ 290:	56                   	push   esi
+ 291:	53                   	push   ebx
+ 292:	bb ff ff 00 00       	mov    ebx,0xffff
+ 297:	83 ec 14             	sub    esp,0x14
+ 29a:	e8 fc ff ff ff       	call   29b <UpdateKeyboardLED+0xb>
+ 29f:	89 c6                	mov    esi,eax
+ 2a1:	e8 fc ff ff ff       	call   2a2 <UpdateKeyboardLED+0x12>
+ 2a6:	66 90                	xchg   ax,ax
+ 2a8:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 2af:	e8 fc ff ff ff       	call   2b0 <UpdateKeyboardLED+0x20>
+ 2b4:	a8 02                	test   al,0x2
+ 2b6:	75 48                	jne    300 <UpdateKeyboardLED+0x70>
+ 2b8:	c7 44 24 04 ed 00 00 	mov    DWORD PTR [esp+0x4],0xed
+ 2bf:	00 
+ 2c0:	bb ff ff 00 00       	mov    ebx,0xffff
+ 2c5:	c7 04 24 60 00 00 00 	mov    DWORD PTR [esp],0x60
+ 2cc:	e8 fc ff ff ff       	call   2cd <UpdateKeyboardLED+0x3d>
+ 2d1:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 2d8:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 2df:	e8 fc ff ff ff       	call   2e0 <UpdateKeyboardLED+0x50>
+ 2e4:	a8 02                	test   al,0x2
+ 2e6:	75 20                	jne    308 <UpdateKeyboardLED+0x78>
+ 2e8:	e8 fc ff ff ff       	call   2e9 <UpdateKeyboardLED+0x59>
+ 2ed:	31 db                	xor    ebx,ebx
+ 2ef:	84 c0                	test   al,al
+ 2f1:	75 25                	jne    318 <UpdateKeyboardLED+0x88>
+ 2f3:	83 c4 14             	add    esp,0x14
+ 2f6:	89 d8                	mov    eax,ebx
+ 2f8:	5b                   	pop    ebx
+ 2f9:	5e                   	pop    esi
+ 2fa:	c3                   	ret    
+ 2fb:	90                   	nop
+ 2fc:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 300:	83 eb 01             	sub    ebx,0x1
+ 303:	75 a3                	jne    2a8 <UpdateKeyboardLED+0x18>
+ 305:	eb b1                	jmp    2b8 <UpdateKeyboardLED+0x28>
+ 307:	90                   	nop
+ 308:	83 eb 01             	sub    ebx,0x1
+ 30b:	90                   	nop
+ 30c:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 310:	75 c6                	jne    2d8 <UpdateKeyboardLED+0x48>
+ 312:	eb d4                	jmp    2e8 <UpdateKeyboardLED+0x58>
+ 314:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 318:	0f b6 15 01 00 00 00 	movzx  edx,BYTE PTR ds:0x1
+ 31f:	bb ff ff 00 00       	mov    ebx,0xffff
+ 324:	0f b6 05 00 00 00 00 	movzx  eax,BYTE PTR ds:0x0
+ 32b:	c7 04 24 60 00 00 00 	mov    DWORD PTR [esp],0x60
+ 332:	c1 e2 02             	shl    edx,0x2
+ 335:	01 c0                	add    eax,eax
+ 337:	09 d0                	or     eax,edx
+ 339:	0a 05 02 00 00 00    	or     al,BYTE PTR ds:0x2
+ 33f:	0f b6 c0             	movzx  eax,al
+ 342:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+ 346:	e8 fc ff ff ff       	call   347 <UpdateKeyboardLED+0xb7>
+ 34b:	90                   	nop
+ 34c:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 350:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 357:	e8 fc ff ff ff       	call   358 <UpdateKeyboardLED+0xc8>
+ 35c:	a8 02                	test   al,0x2
+ 35e:	75 18                	jne    378 <UpdateKeyboardLED+0xe8>
+ 360:	e8 fc ff ff ff       	call   361 <UpdateKeyboardLED+0xd1>
+ 365:	89 34 24             	mov    DWORD PTR [esp],esi
+ 368:	89 c3                	mov    ebx,eax
+ 36a:	e8 fc ff ff ff       	call   36b <UpdateKeyboardLED+0xdb>
+ 36f:	83 c4 14             	add    esp,0x14
+ 372:	89 d8                	mov    eax,ebx
+ 374:	5b                   	pop    ebx
+ 375:	5e                   	pop    esi
+ 376:	c3                   	ret    
+ 377:	90                   	nop
+ 378:	83 eb 01             	sub    ebx,0x1
+ 37b:	75 d3                	jne    350 <UpdateKeyboardLED+0xc0>
+ 37d:	eb e1                	jmp    360 <UpdateKeyboardLED+0xd0>
+ 37f:	90                   	nop
+
+00000380 <InitKeyboard>:
+ 380:	53                   	push   ebx
+ 381:	bb ff ff 00 00       	mov    ebx,0xffff
+ 386:	83 ec 18             	sub    esp,0x18
+ 389:	c7 44 24 04 ae 00 00 	mov    DWORD PTR [esp+0x4],0xae
+ 390:	00 
+ 391:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 398:	c6 05 00 00 00 00 01 	mov    BYTE PTR ds:0x0,0x1
+ 39f:	e8 fc ff ff ff       	call   3a0 <InitKeyboard+0x20>
+ 3a4:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 3a8:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 3af:	e8 fc ff ff ff       	call   3b0 <InitKeyboard+0x30>
+ 3b4:	a8 02                	test   al,0x2
+ 3b6:	75 30                	jne    3e8 <InitKeyboard+0x68>
+ 3b8:	c7 44 24 04 f4 00 00 	mov    DWORD PTR [esp+0x4],0xf4
+ 3bf:	00 
+ 3c0:	c7 04 24 60 00 00 00 	mov    DWORD PTR [esp],0x60
+ 3c7:	e8 fc ff ff ff       	call   3c8 <InitKeyboard+0x48>
+ 3cc:	e8 fc ff ff ff       	call   3cd <InitKeyboard+0x4d>
+ 3d1:	89 c2                	mov    edx,eax
+ 3d3:	31 c0                	xor    eax,eax
+ 3d5:	84 d2                	test   dl,dl
+ 3d7:	74 0a                	je     3e3 <InitKeyboard+0x63>
+ 3d9:	e8 fc ff ff ff       	call   3da <InitKeyboard+0x5a>
+ 3de:	b8 01 00 00 00       	mov    eax,0x1
+ 3e3:	83 c4 18             	add    esp,0x18
+ 3e6:	5b                   	pop    ebx
+ 3e7:	c3                   	ret    
+ 3e8:	83 eb 01             	sub    ebx,0x1
+ 3eb:	75 bb                	jne    3a8 <InitKeyboard+0x28>
+ 3ed:	eb c9                	jmp    3b8 <InitKeyboard+0x38>
+ 3ef:	90                   	nop
+
+000003f0 <IsKeyboardOutputBufferFull>:
+ 3f0:	83 ec 1c             	sub    esp,0x1c
+ 3f3:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 3fa:	e8 fc ff ff ff       	call   3fb <IsKeyboardOutputBufferFull+0xb>
+ 3ff:	83 c4 1c             	add    esp,0x1c
+ 402:	83 e0 01             	and    eax,0x1
+ 405:	c3                   	ret    
+ 406:	8d 76 00             	lea    esi,[esi+0x0]
+ 409:	8d bc 27 00 00 00 00 	lea    edi,[edi+eiz*1+0x0]
+
+00000410 <IsKeyboardInputBufferFull>:
+ 410:	83 ec 1c             	sub    esp,0x1c
+ 413:	c7 04 24 64 00 00 00 	mov    DWORD PTR [esp],0x64
+ 41a:	e8 fc ff ff ff       	call   41b <IsKeyboardInputBufferFull+0xb>
+ 41f:	83 c4 1c             	add    esp,0x1c
+ 422:	d0 e8                	shr    al,1
+ 424:	83 e0 01             	and    eax,0x1
+ 427:	c3                   	ret    
+ 428:	90                   	nop
+ 429:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+
+00000430 <PutScanCodeToInterruptQueue>:
+ 430:	83 ec 1c             	sub    esp,0x1c
+ 433:	80 3d 04 00 00 00 00 	cmp    BYTE PTR ds:0x4,0x0
+ 43a:	0f b6 44 24 20       	movzx  eax,BYTE PTR [esp+0x20]
+ 43f:	74 0f                	je     450 <PutScanCodeToInterruptQueue+0x20>
+ 441:	83 2d 08 00 00 00 01 	sub    DWORD PTR ds:0x8,0x1
+ 448:	74 5e                	je     4a8 <PutScanCodeToInterruptQueue+0x78>
+ 44a:	83 c4 1c             	add    esp,0x1c
+ 44d:	c3                   	ret    
+ 44e:	66 90                	xchg   ax,ax
+ 450:	80 3d 0c 00 00 00 00 	cmp    BYTE PTR ds:0xc,0x0
+ 457:	75 2f                	jne    488 <PutScanCodeToInterruptQueue+0x58>
+ 459:	3c e1                	cmp    al,0xe1
+ 45b:	0f 84 87 00 00 00    	je     4e8 <PutScanCodeToInterruptQueue+0xb8>
+ 461:	3c e0                	cmp    al,0xe0
+ 463:	74 73                	je     4d8 <PutScanCodeToInterruptQueue+0xa8>
+ 465:	84 c0                	test   al,al
+ 467:	0f b6 d0             	movzx  edx,al
+ 46a:	78 5c                	js     4c8 <PutScanCodeToInterruptQueue+0x98>
+ 46c:	0f b7 c2             	movzx  eax,dx
+ 46f:	0d 00 00 00 02       	or     eax,0x2000000
+ 474:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+ 478:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 47f:	e8 fc ff ff ff       	call   480 <PutScanCodeToInterruptQueue+0x50>
+ 484:	83 c4 1c             	add    esp,0x1c
+ 487:	c3                   	ret    
+ 488:	0f b6 d0             	movzx  edx,al
+ 48b:	83 c2 3d             	add    edx,0x3d
+ 48e:	84 c0                	test   al,al
+ 490:	c6 05 0c 00 00 00 00 	mov    BYTE PTR ds:0xc,0x0
+ 497:	79 d3                	jns    46c <PutScanCodeToInterruptQueue+0x3c>
+ 499:	83 e0 7f             	and    eax,0x7f
+ 49c:	8d 50 3d             	lea    edx,[eax+0x3d]
+ 49f:	80 ce 01             	or     dh,0x1
+ 4a2:	eb c8                	jmp    46c <PutScanCodeToInterruptQueue+0x3c>
+ 4a4:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 4a8:	c7 44 24 04 91 00 00 	mov    DWORD PTR [esp+0x4],0x2000091
+ 4af:	02 
+ 4b0:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 4b7:	c6 05 04 00 00 00 00 	mov    BYTE PTR ds:0x4,0x0
+ 4be:	e8 fc ff ff ff       	call   4bf <PutScanCodeToInterruptQueue+0x8f>
+ 4c3:	83 c4 1c             	add    esp,0x1c
+ 4c6:	c3                   	ret    
+ 4c7:	90                   	nop
+ 4c8:	89 c2                	mov    edx,eax
+ 4ca:	83 e2 7f             	and    edx,0x7f
+ 4cd:	80 ce 01             	or     dh,0x1
+ 4d0:	eb 9a                	jmp    46c <PutScanCodeToInterruptQueue+0x3c>
+ 4d2:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 4d8:	c6 05 0c 00 00 00 01 	mov    BYTE PTR ds:0xc,0x1
+ 4df:	e9 66 ff ff ff       	jmp    44a <PutScanCodeToInterruptQueue+0x1a>
+ 4e4:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 4e8:	c6 05 04 00 00 00 01 	mov    BYTE PTR ds:0x4,0x1
+ 4ef:	c7 05 08 00 00 00 02 	mov    DWORD PTR ds:0x8,0x2
+ 4f6:	00 00 00 
+ 4f9:	e9 4c ff ff ff       	jmp    44a <PutScanCodeToInterruptQueue+0x1a>
+ 4fe:	66 90                	xchg   ax,ax
+
+00000500 <OnKeyboardInterrupt>:
+ 500:	56                   	push   esi
+ 501:	53                   	push   ebx
+ 502:	83 ec 34             	sub    esp,0x34
+ 505:	0f b6 5c 24 40       	movzx  ebx,BYTE PTR [esp+0x40]
+ 50a:	8d 04 5b             	lea    eax,[ebx+ebx*2]
+ 50d:	0f b6 90 00 00 00 00 	movzx  edx,BYTE PTR [eax+0x0]
+ 514:	0f b6 88 01 00 00 00 	movzx  ecx,BYTE PTR [eax+0x1]
+ 51b:	8d 43 b9             	lea    eax,[ebx-0x47]
+ 51e:	66 83 f8 0c          	cmp    ax,0xc
+ 522:	0f b6 f2             	movzx  esi,dl
+ 525:	0f 87 85 00 00 00    	ja     5b0 <OnKeyboardInterrupt+0xb0>
+ 52b:	80 3d 00 00 00 00 00 	cmp    BYTE PTR ds:0x0,0x0
+ 532:	0f 85 b0 00 00 00    	jne    5e8 <OnKeyboardInterrupt+0xe8>
+ 538:	0f b7 44 24 40       	movzx  eax,WORD PTR [esp+0x40]
+ 53d:	66 25 00 01          	and    ax,0x100
+ 541:	0f 94 84 5b 02 00 00 	sete   BYTE PTR [ebx+ebx*2+0x2]
+ 548:	00 
+ 549:	84 d2                	test   dl,dl
+ 54b:	0f 88 b7 00 00 00    	js     608 <OnKeyboardInterrupt+0x108>
+ 551:	c7 44 24 10 f7 05 00 	mov    DWORD PTR [esp+0x10],0x5f7
+ 558:	00 
+ 559:	c7 44 24 0c 2e 00 00 	mov    DWORD PTR [esp+0xc],0x2e
+ 560:	00 
+ 561:	0f b7 05 01 80 26 00 	movzx  eax,WORD PTR ds:0x268001
+ 568:	c7 44 24 04 1e 00 00 	mov    DWORD PTR [esp+0x4],0x1e
+ 56f:	00 
+ 570:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 577:	89 44 24 08          	mov    DWORD PTR [esp+0x8],eax
+ 57b:	e8 fc ff ff ff       	call   57c <OnKeyboardInterrupt+0x7c>
+ 580:	89 74 24 10          	mov    DWORD PTR [esp+0x10],esi
+ 584:	c7 44 24 0c 00 00 00 	mov    DWORD PTR [esp+0xc],0x0
+ 58b:	00 
+ 58c:	c7 44 24 08 00 00 00 	mov    DWORD PTR [esp+0x8],0x0
+ 593:	00 
+ 594:	c7 44 24 04 1e 00 00 	mov    DWORD PTR [esp+0x4],0x1e
+ 59b:	00 
+ 59c:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 5a3:	e8 fc ff ff ff       	call   5a4 <OnKeyboardInterrupt+0xa4>
+ 5a8:	83 c4 34             	add    esp,0x34
+ 5ab:	5b                   	pop    ebx
+ 5ac:	5e                   	pop    esi
+ 5ad:	c3                   	ret    
+ 5ae:	66 90                	xchg   ax,ax
+ 5b0:	89 34 24             	mov    DWORD PTR [esp],esi
+ 5b3:	88 54 24 2c          	mov    BYTE PTR [esp+0x2c],dl
+ 5b7:	88 4c 24 28          	mov    BYTE PTR [esp+0x28],cl
+ 5bb:	e8 fc ff ff ff       	call   5bc <OnKeyboardInterrupt+0xbc>
+ 5c0:	0f b6 54 24 2c       	movzx  edx,BYTE PTR [esp+0x2c]
+ 5c5:	0f b6 4c 24 28       	movzx  ecx,BYTE PTR [esp+0x28]
+ 5ca:	85 c0                	test   eax,eax
+ 5cc:	74 2a                	je     5f8 <OnKeyboardInterrupt+0xf8>
+ 5ce:	80 3d 01 00 00 00 00 	cmp    BYTE PTR ds:0x1,0x0
+ 5d5:	74 21                	je     5f8 <OnKeyboardInterrupt+0xf8>
+ 5d7:	80 3d 03 00 00 00 00 	cmp    BYTE PTR ds:0x3,0x0
+ 5de:	0f 85 54 ff ff ff    	jne    538 <OnKeyboardInterrupt+0x38>
+ 5e4:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 5e8:	0f b6 f1             	movzx  esi,cl
+ 5eb:	89 ca                	mov    edx,ecx
+ 5ed:	e9 46 ff ff ff       	jmp    538 <OnKeyboardInterrupt+0x38>
+ 5f2:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 5f8:	80 3d 03 00 00 00 00 	cmp    BYTE PTR ds:0x3,0x0
+ 5ff:	0f 84 33 ff ff ff    	je     538 <OnKeyboardInterrupt+0x38>
+ 605:	eb e1                	jmp    5e8 <OnKeyboardInterrupt+0xe8>
+ 607:	90                   	nop
+ 608:	83 c2 7e             	add    edx,0x7e
+ 60b:	80 fa 10             	cmp    dl,0x10
+ 60e:	76 60                	jbe    670 <OnKeyboardInterrupt+0x170>
+ 610:	c7 44 24 10 f7 05 00 	mov    DWORD PTR [esp+0x10],0x5f7
+ 617:	00 
+ 618:	c7 44 24 0c 2e 00 00 	mov    DWORD PTR [esp+0xc],0x2e
+ 61f:	00 
+ 620:	0f b7 05 01 80 26 00 	movzx  eax,WORD PTR ds:0x268001
+ 627:	c7 44 24 04 1e 00 00 	mov    DWORD PTR [esp+0x4],0x1e
+ 62e:	00 
+ 62f:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 636:	89 44 24 08          	mov    DWORD PTR [esp+0x8],eax
+ 63a:	e8 fc ff ff ff       	call   63b <OnKeyboardInterrupt+0x13b>
+ 63f:	89 74 24 10          	mov    DWORD PTR [esp+0x10],esi
+ 643:	c7 44 24 0c 16 00 00 	mov    DWORD PTR [esp+0xc],0x16
+ 64a:	00 
+ 64b:	c7 44 24 08 00 00 00 	mov    DWORD PTR [esp+0x8],0x0
+ 652:	00 
+ 653:	c7 44 24 04 1e 00 00 	mov    DWORD PTR [esp+0x4],0x1e
+ 65a:	00 
+ 65b:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 662:	e8 fc ff ff ff       	call   663 <OnKeyboardInterrupt+0x163>
+ 667:	83 c4 34             	add    esp,0x34
+ 66a:	5b                   	pop    ebx
+ 66b:	5e                   	pop    esi
+ 66c:	c3                   	ret    
+ 66d:	8d 76 00             	lea    esi,[esi+0x0]
+ 670:	0f b6 d2             	movzx  edx,dl
+ 673:	ff 24 95 00 00 00 00 	jmp    DWORD PTR [edx*4+0x0]
+ 67a:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 680:	66 85 c0             	test   ax,ax
+ 683:	74 8b                	je     610 <OnKeyboardInterrupt+0x110>
+ 685:	80 3d 02 00 00 00 00 	cmp    BYTE PTR ds:0x2,0x0
+ 68c:	0f 94 05 02 00 00 00 	sete   BYTE PTR ds:0x2
+ 693:	e8 fc ff ff ff       	call   694 <OnKeyboardInterrupt+0x194>
+ 698:	e9 73 ff ff ff       	jmp    610 <OnKeyboardInterrupt+0x110>
+ 69d:	8d 76 00             	lea    esi,[esi+0x0]
+ 6a0:	66 85 c0             	test   ax,ax
+ 6a3:	0f 84 67 ff ff ff    	je     610 <OnKeyboardInterrupt+0x110>
+ 6a9:	80 3d 00 00 00 00 00 	cmp    BYTE PTR ds:0x0,0x0
+ 6b0:	0f 94 05 00 00 00 00 	sete   BYTE PTR ds:0x0
+ 6b7:	e8 fc ff ff ff       	call   6b8 <OnKeyboardInterrupt+0x1b8>
+ 6bc:	e9 4f ff ff ff       	jmp    610 <OnKeyboardInterrupt+0x110>
+ 6c1:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 6c8:	66 85 c0             	test   ax,ax
+ 6cb:	0f 84 3f ff ff ff    	je     610 <OnKeyboardInterrupt+0x110>
+ 6d1:	80 3d 01 00 00 00 00 	cmp    BYTE PTR ds:0x1,0x0
+ 6d8:	0f 94 05 01 00 00 00 	sete   BYTE PTR ds:0x1
+ 6df:	e8 fc ff ff ff       	call   6e0 <OnKeyboardInterrupt+0x1e0>
+ 6e4:	e9 27 ff ff ff       	jmp    610 <OnKeyboardInterrupt+0x110>
+ 6e9:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 6f0:	80 3d 80 00 00 00 00 	cmp    BYTE PTR ds:0x80,0x0
+ 6f7:	b8 01 00 00 00       	mov    eax,0x1
+ 6fc:	74 0a                	je     708 <OnKeyboardInterrupt+0x208>
+ 6fe:	a2 03 00 00 00       	mov    ds:0x3,al
+ 703:	e9 08 ff ff ff       	jmp    610 <OnKeyboardInterrupt+0x110>
+ 708:	80 3d a4 00 00 00 00 	cmp    BYTE PTR ds:0xa4,0x0
+ 70f:	0f 95 c0             	setne  al
+ 712:	eb ea                	jmp    6fe <OnKeyboardInterrupt+0x1fe>
+ 714:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 71a:	8d bf 00 00 00 00    	lea    edi,[edi+0x0]
+
+00000720 <_KeyboardHandler>:
+ 720:	83 ec 1c             	sub    esp,0x1c
+ 723:	c7 04 24 01 00 00 00 	mov    DWORD PTR [esp],0x1
+ 72a:	e8 fc ff ff ff       	call   72b <_KeyboardHandler+0xb>
+ 72f:	c7 04 24 60 00 00 00 	mov    DWORD PTR [esp],0x60
+ 736:	e8 fc ff ff ff       	call   737 <_KeyboardHandler+0x17>
+ 73b:	80 3d 04 00 00 00 00 	cmp    BYTE PTR ds:0x4,0x0
+ 742:	74 14                	je     758 <_KeyboardHandler+0x38>
+ 744:	83 2d 08 00 00 00 01 	sub    DWORD PTR ds:0x8,0x1
+ 74b:	74 63                	je     7b0 <_KeyboardHandler+0x90>
+ 74d:	83 c4 1c             	add    esp,0x1c
+ 750:	c3                   	ret    
+ 751:	8d b4 26 00 00 00 00 	lea    esi,[esi+eiz*1+0x0]
+ 758:	80 3d 0c 00 00 00 00 	cmp    BYTE PTR ds:0xc,0x0
+ 75f:	75 2f                	jne    790 <_KeyboardHandler+0x70>
+ 761:	3c e1                	cmp    al,0xe1
+ 763:	0f 84 87 00 00 00    	je     7f0 <_KeyboardHandler+0xd0>
+ 769:	3c e0                	cmp    al,0xe0
+ 76b:	74 73                	je     7e0 <_KeyboardHandler+0xc0>
+ 76d:	84 c0                	test   al,al
+ 76f:	0f b6 d0             	movzx  edx,al
+ 772:	78 5c                	js     7d0 <_KeyboardHandler+0xb0>
+ 774:	0f b7 c2             	movzx  eax,dx
+ 777:	0d 00 00 00 02       	or     eax,0x2000000
+ 77c:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+ 780:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 787:	e8 fc ff ff ff       	call   788 <_KeyboardHandler+0x68>
+ 78c:	83 c4 1c             	add    esp,0x1c
+ 78f:	c3                   	ret    
+ 790:	0f b6 d0             	movzx  edx,al
+ 793:	83 c2 3d             	add    edx,0x3d
+ 796:	84 c0                	test   al,al
+ 798:	c6 05 0c 00 00 00 00 	mov    BYTE PTR ds:0xc,0x0
+ 79f:	79 d3                	jns    774 <_KeyboardHandler+0x54>
+ 7a1:	83 e0 7f             	and    eax,0x7f
+ 7a4:	8d 50 3d             	lea    edx,[eax+0x3d]
+ 7a7:	80 ce 01             	or     dh,0x1
+ 7aa:	eb c8                	jmp    774 <_KeyboardHandler+0x54>
+ 7ac:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 7b0:	c7 44 24 04 91 00 00 	mov    DWORD PTR [esp+0x4],0x2000091
+ 7b7:	02 
+ 7b8:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+ 7bf:	c6 05 04 00 00 00 00 	mov    BYTE PTR ds:0x4,0x0
+ 7c6:	e8 fc ff ff ff       	call   7c7 <_KeyboardHandler+0xa7>
+ 7cb:	83 c4 1c             	add    esp,0x1c
+ 7ce:	c3                   	ret    
+ 7cf:	90                   	nop
+ 7d0:	89 c2                	mov    edx,eax
+ 7d2:	83 e2 7f             	and    edx,0x7f
+ 7d5:	80 ce 01             	or     dh,0x1
+ 7d8:	eb 9a                	jmp    774 <_KeyboardHandler+0x54>
+ 7da:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 7e0:	c6 05 0c 00 00 00 01 	mov    BYTE PTR ds:0xc,0x1
+ 7e7:	e9 61 ff ff ff       	jmp    74d <_KeyboardHandler+0x2d>
+ 7ec:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+ 7f0:	c6 05 04 00 00 00 01 	mov    BYTE PTR ds:0x4,0x1
+ 7f7:	c7 05 08 00 00 00 02 	mov    DWORD PTR ds:0x8,0x2
+ 7fe:	00 00 00 
+ 801:	e9 47 ff ff ff       	jmp    74d <_KeyboardHandler+0x2d>
+
+Disassembly of section .bss:
+
+00000000 <g_Keyboard>:
+   0:	00 00                	add    BYTE PTR [eax],al
+	...
+
+00000004 <bPause.1351>:
+   4:	00 00                	add    BYTE PTR [eax],al
+	...
+
+00000008 <SkipForPause.1352>:
+   8:	00 00                	add    BYTE PTR [eax],al
+	...
+
+0000000c <bExternCode.1350>:
+	...
+
+Disassembly of section .rodata.str1.1:
+
+00000000 <.rodata.str1.1>:
+   0:	49                   	dec    ecx
+   1:	6e                   	outs   dx,BYTE PTR ds:[esi]
+   2:	70 75                	jo     79 <GetClubcos0AsciiFromKeyCode+0x19>
+   4:	74 20                	je     26 <.rodata.str1.1+0x26>
+   6:	41                   	inc    ecx
+   7:	73 63                	jae    6c <GetClubcos0AsciiFromKeyCode+0xc>
+   9:	69 69 20 43 6f 64 65 	imul   ebp,DWORD PTR [ecx+0x20],0x65646f43
+  10:	20 5b 25             	and    BYTE PTR [ebx+0x25],bl
+  13:	63 5d 00             	arpl   WORD PTR [ebp+0x0],bx
+  16:	49                   	dec    ecx
+  17:	6e                   	outs   dx,BYTE PTR ds:[esi]
+  18:	70 75                	jo     8f <GetClubcos0AsciiFromKeyCode+0x2f>
+  1a:	74 20                	je     3c <bExternCode.1350+0x30>
+  1c:	4e                   	dec    esi
+  1d:	6f                   	outs   dx,DWORD PTR ds:[esi]
+  1e:	6e                   	outs   dx,BYTE PTR ds:[esi]
+  1f:	20 41 73             	and    BYTE PTR [ecx+0x73],al
+  22:	63 69 69             	arpl   WORD PTR [ecx+0x69],bp
+  25:	20 43 6f             	and    BYTE PTR [ebx+0x6f],al
+  28:	64 65 20 5b 30       	fs and BYTE PTR fs:gs:[ebx+0x30],bl
+  2d:	78 25                	js     54 <bExternCode.1350+0x48>
+  2f:	78 5d                	js     8e <GetClubcos0AsciiFromKeyCode+0x2e>
+	...
+
+Disassembly of section .rodata:
+
+00000000 <.rodata>:
+   0:	f0 06                	lock push es
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	f0 06                	lock push es
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	10 06                	adc    BYTE PTR [esi],al
+   a:	00 00                	add    BYTE PTR [eax],al
+   c:	10 06                	adc    BYTE PTR [esi],al
+   e:	00 00                	add    BYTE PTR [eax],al
+  10:	c8 06 00 00          	enter  0x6,0x0
+  14:	10 06                	adc    BYTE PTR [esi],al
+  16:	00 00                	add    BYTE PTR [eax],al
+  18:	10 06                	adc    BYTE PTR [esi],al
+  1a:	00 00                	add    BYTE PTR [eax],al
+  1c:	10 06                	adc    BYTE PTR [esi],al
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	10 06                	adc    BYTE PTR [esi],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	10 06                	adc    BYTE PTR [esi],al
+  26:	00 00                	add    BYTE PTR [eax],al
+  28:	10 06                	adc    BYTE PTR [esi],al
+  2a:	00 00                	add    BYTE PTR [eax],al
+  2c:	10 06                	adc    BYTE PTR [esi],al
+  2e:	00 00                	add    BYTE PTR [eax],al
+  30:	10 06                	adc    BYTE PTR [esi],al
+  32:	00 00                	add    BYTE PTR [eax],al
+  34:	10 06                	adc    BYTE PTR [esi],al
+  36:	00 00                	add    BYTE PTR [eax],al
+  38:	10 06                	adc    BYTE PTR [esi],al
+  3a:	00 00                	add    BYTE PTR [eax],al
+  3c:	a0 06 00 00 80       	mov    al,ds:0x80000006
+  41:	06                   	push   es
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 24 00             	add    BYTE PTR [eax+eax*1],ah
+  1a:	00 00                	add    BYTE PTR [eax],al
+  1c:	1c 00                	sbb    al,0x0
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	5f                   	pop    edi
+  25:	00 00                	add    BYTE PTR [eax],al
+  27:	00 00                	add    BYTE PTR [eax],al
+  29:	43                   	inc    ebx
+  2a:	0e                   	push   cs
+  2b:	10 4e 86             	adc    BYTE PTR [esi-0x7a],cl
+  2e:	03 49 87             	add    ecx,DWORD PTR [ecx-0x79]
+  31:	02 48 83             	add    cl,BYTE PTR [eax-0x7d]
+  34:	04 74                	add    al,0x74
+  36:	0a c7                	or     al,bh
+  38:	c6 c3 0e             	mov    bl,0xe
+  3b:	04 42                	add    al,0x42
+  3d:	0b 00                	or     eax,DWORD PTR [eax]
+  3f:	00 28                	add    BYTE PTR [eax],ch
+  41:	00 00                	add    BYTE PTR [eax],al
+  43:	00 44 00 00          	add    BYTE PTR [eax+eax*1+0x0],al
+  47:	00 60 00             	add    BYTE PTR [eax+0x0],ah
+  4a:	00 00                	add    BYTE PTR [eax],al
+  4c:	79 00                	jns    4e <.eh_frame+0x4e>
+  4e:	00 00                	add    BYTE PTR [eax],al
+  50:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+  53:	08 83 02 43 0e 30    	or     BYTE PTR [ebx+0x300e4302],al
+  59:	6f                   	outs   dx,DWORD PTR ds:[esi]
+  5a:	0a 0e                	or     cl,BYTE PTR [esi]
+  5c:	08 43 c3             	or     BYTE PTR [ebx-0x3d],al
+  5f:	0e                   	push   cs
+  60:	04 42                	add    al,0x42
+  62:	0b 7d 0e             	or     edi,DWORD PTR [ebp+0xe]
+  65:	08 43 c3             	or     BYTE PTR [ebx-0x3d],al
+  68:	0e                   	push   cs
+  69:	04 00                	add    al,0x0
+  6b:	00 10                	add    BYTE PTR [eax],dl
+  6d:	00 00                	add    BYTE PTR [eax],al
+  6f:	00 70 00             	add    BYTE PTR [eax+0x0],dh
+  72:	00 00                	add    BYTE PTR [eax],al
+  74:	e0 00                	loopne 76 <.eh_frame+0x76>
+  76:	00 00                	add    BYTE PTR [eax],al
+  78:	0b 00                	or     eax,DWORD PTR [eax]
+  7a:	00 00                	add    BYTE PTR [eax],al
+  7c:	00 00                	add    BYTE PTR [eax],al
+  7e:	00 00                	add    BYTE PTR [eax],al
+  80:	10 00                	adc    BYTE PTR [eax],al
+  82:	00 00                	add    BYTE PTR [eax],al
+  84:	84 00                	test   BYTE PTR [eax],al
+  86:	00 00                	add    BYTE PTR [eax],al
+  88:	f0 00 00             	lock add BYTE PTR [eax],al
+  8b:	00 10                	add    BYTE PTR [eax],dl
+  8d:	00 00                	add    BYTE PTR [eax],al
+  8f:	00 00                	add    BYTE PTR [eax],al
+  91:	00 00                	add    BYTE PTR [eax],al
+  93:	00 20                	add    BYTE PTR [eax],ah
+  95:	00 00                	add    BYTE PTR [eax],al
+  97:	00 98 00 00 00 00    	add    BYTE PTR [eax+0x0],bl
+  9d:	01 00                	add    DWORD PTR [eax],eax
+  9f:	00 32                	add    BYTE PTR [edx],dh
+  a1:	00 00                	add    BYTE PTR [eax],al
+  a3:	00 00                	add    BYTE PTR [eax],al
+  a5:	41                   	inc    ecx
+  a6:	0e                   	push   cs
+  a7:	08 83 02 48 0e 20    	or     BYTE PTR [ebx+0x200e4802],al
+  ad:	5a                   	pop    edx
+  ae:	0a 0e                	or     cl,BYTE PTR [esi]
+  b0:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  b3:	0e                   	push   cs
+  b4:	04 44                	add    al,0x44
+  b6:	0b 00                	or     eax,DWORD PTR [eax]
+  b8:	20 00                	and    BYTE PTR [eax],al
+  ba:	00 00                	add    BYTE PTR [eax],al
+  bc:	bc 00 00 00 40       	mov    esp,0x40000000
+  c1:	01 00                	add    DWORD PTR [eax],eax
+  c3:	00 32                	add    BYTE PTR [edx],dh
+  c5:	00 00                	add    BYTE PTR [eax],al
+  c7:	00 00                	add    BYTE PTR [eax],al
+  c9:	41                   	inc    ecx
+  ca:	0e                   	push   cs
+  cb:	08 83 02 48 0e 20    	or     BYTE PTR [ebx+0x200e4802],al
+  d1:	5a                   	pop    edx
+  d2:	0a 0e                	or     cl,BYTE PTR [esi]
+  d4:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  d7:	0e                   	push   cs
+  d8:	04 44                	add    al,0x44
+  da:	0b 00                	or     eax,DWORD PTR [eax]
+  dc:	38 00                	cmp    BYTE PTR [eax],al
+  de:	00 00                	add    BYTE PTR [eax],al
+  e0:	e0 00                	loopne e2 <.eh_frame+0xe2>
+  e2:	00 00                	add    BYTE PTR [eax],al
+  e4:	80 01 00             	add    BYTE PTR [ecx],0x0
+  e7:	00 0e                	add    BYTE PTR [esi],cl
+  e9:	01 00                	add    DWORD PTR [eax],eax
+  eb:	00 00                	add    BYTE PTR [eax],al
+  ed:	41                   	inc    ecx
+  ee:	0e                   	push   cs
+  ef:	08 86 02 46 0e 0c    	or     BYTE PTR [esi+0xc0e4602],al
+  f5:	83 03 43             	add    DWORD PTR [ebx],0x43
+  f8:	0e                   	push   cs
+  f9:	20 02                	and    BYTE PTR [edx],al
+  fb:	54                   	push   esp
+  fc:	0a 0e                	or     cl,BYTE PTR [esi]
+  fe:	0c 43                	or     al,0x43
+ 100:	c3                   	ret    
+ 101:	0e                   	push   cs
+ 102:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 105:	0e                   	push   cs
+ 106:	04 46                	add    al,0x46
+ 108:	0b 02                	or     eax,DWORD PTR [edx]
+ 10a:	92                   	xchg   edx,eax
+ 10b:	0a 0e                	or     cl,BYTE PTR [esi]
+ 10d:	0c 46                	or     al,0x46
+ 10f:	c3                   	ret    
+ 110:	0e                   	push   cs
+ 111:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 114:	0e                   	push   cs
+ 115:	04 41                	add    al,0x41
+ 117:	0b 38                	or     edi,DWORD PTR [eax]
+ 119:	00 00                	add    BYTE PTR [eax],al
+ 11b:	00 1c 01             	add    BYTE PTR [ecx+eax*1],bl
+ 11e:	00 00                	add    BYTE PTR [eax],al
+ 120:	90                   	nop
+ 121:	02 00                	add    al,BYTE PTR [eax]
+ 123:	00 ef                	add    bh,ch
+ 125:	00 00                	add    BYTE PTR [eax],al
+ 127:	00 00                	add    BYTE PTR [eax],al
+ 129:	41                   	inc    ecx
+ 12a:	0e                   	push   cs
+ 12b:	08 86 02 41 0e 0c    	or     BYTE PTR [esi+0xc0e4102],al
+ 131:	83 03 48             	add    DWORD PTR [ebx],0x48
+ 134:	0e                   	push   cs
+ 135:	20 02                	and    BYTE PTR [edx],al
+ 137:	5c                   	pop    esp
+ 138:	0a 0e                	or     cl,BYTE PTR [esi]
+ 13a:	0c 43                	or     al,0x43
+ 13c:	c3                   	ret    
+ 13d:	0e                   	push   cs
+ 13e:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 141:	0e                   	push   cs
+ 142:	04 46                	add    al,0x46
+ 144:	0b 02                	or     eax,DWORD PTR [edx]
+ 146:	72 0a                	jb     152 <.eh_frame+0x152>
+ 148:	0e                   	push   cs
+ 149:	0c 43                	or     al,0x43
+ 14b:	c3                   	ret    
+ 14c:	0e                   	push   cs
+ 14d:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 150:	0e                   	push   cs
+ 151:	04 42                	add    al,0x42
+ 153:	0b 20                	or     esp,DWORD PTR [eax]
+ 155:	00 00                	add    BYTE PTR [eax],al
+ 157:	00 58 01             	add    BYTE PTR [eax+0x1],bl
+ 15a:	00 00                	add    BYTE PTR [eax],al
+ 15c:	80 03 00             	add    BYTE PTR [ebx],0x0
+ 15f:	00 6f 00             	add    BYTE PTR [edi+0x0],ch
+ 162:	00 00                	add    BYTE PTR [eax],al
+ 164:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+ 167:	08 83 02 48 0e 20    	or     BYTE PTR [ebx+0x200e4802],al
+ 16d:	02 5d 0a             	add    bl,BYTE PTR [ebp+0xa]
+ 170:	0e                   	push   cs
+ 171:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+ 174:	0e                   	push   cs
+ 175:	04 41                	add    al,0x41
+ 177:	0b 14 00             	or     edx,DWORD PTR [eax+eax*1]
+ 17a:	00 00                	add    BYTE PTR [eax],al
+ 17c:	7c 01                	jl     17f <.eh_frame+0x17f>
+ 17e:	00 00                	add    BYTE PTR [eax],al
+ 180:	f0 03 00             	lock add eax,DWORD PTR [eax]
+ 183:	00 16                	add    BYTE PTR [esi],dl
+ 185:	00 00                	add    BYTE PTR [eax],al
+ 187:	00 00                	add    BYTE PTR [eax],al
+ 189:	43                   	inc    ebx
+ 18a:	0e                   	push   cs
+ 18b:	20 4f 0e             	and    BYTE PTR [edi+0xe],cl
+ 18e:	04 00                	add    al,0x0
+ 190:	14 00                	adc    al,0x0
+ 192:	00 00                	add    BYTE PTR [eax],al
+ 194:	94                   	xchg   esp,eax
+ 195:	01 00                	add    DWORD PTR [eax],eax
+ 197:	00 10                	add    BYTE PTR [eax],dl
+ 199:	04 00                	add    al,0x0
+ 19b:	00 18                	add    BYTE PTR [eax],bl
+ 19d:	00 00                	add    BYTE PTR [eax],al
+ 19f:	00 00                	add    BYTE PTR [eax],al
+ 1a1:	43                   	inc    ebx
+ 1a2:	0e                   	push   cs
+ 1a3:	20 4f 0e             	and    BYTE PTR [edi+0xe],cl
+ 1a6:	04 00                	add    al,0x0
+ 1a8:	24 00                	and    al,0x0
+ 1aa:	00 00                	add    BYTE PTR [eax],al
+ 1ac:	ac                   	lods   al,BYTE PTR ds:[esi]
+ 1ad:	01 00                	add    DWORD PTR [eax],eax
+ 1af:	00 30                	add    BYTE PTR [eax],dh
+ 1b1:	04 00                	add    al,0x0
+ 1b3:	00 ce                	add    dh,cl
+ 1b5:	00 00                	add    BYTE PTR [eax],al
+ 1b7:	00 00                	add    BYTE PTR [eax],al
+ 1b9:	43                   	inc    ebx
+ 1ba:	0e                   	push   cs
+ 1bb:	20 5a 0a             	and    BYTE PTR [edx+0xa],bl
+ 1be:	0e                   	push   cs
+ 1bf:	04 43                	add    al,0x43
+ 1c1:	0b 77 0a             	or     esi,DWORD PTR [edi+0xa]
+ 1c4:	0e                   	push   cs
+ 1c5:	04 41                	add    al,0x41
+ 1c7:	0b 7e 0a             	or     edi,DWORD PTR [esi+0xa]
+ 1ca:	0e                   	push   cs
+ 1cb:	04 42                	add    al,0x42
+ 1cd:	0b 00                	or     eax,DWORD PTR [eax]
+ 1cf:	00 38                	add    BYTE PTR [eax],bh
+ 1d1:	00 00                	add    BYTE PTR [eax],al
+ 1d3:	00 d4                	add    ah,dl
+ 1d5:	01 00                	add    DWORD PTR [eax],eax
+ 1d7:	00 00                	add    BYTE PTR [eax],al
+ 1d9:	05 00 00 14 02       	add    eax,0x2140000
+ 1de:	00 00                	add    BYTE PTR [eax],al
+ 1e0:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+ 1e3:	08 86 02 41 0e 0c    	or     BYTE PTR [esi+0xc0e4102],al
+ 1e9:	83 03 43             	add    DWORD PTR [ebx],0x43
+ 1ec:	0e                   	push   cs
+ 1ed:	40                   	inc    eax
+ 1ee:	02 a6 0a 0e 0c 41    	add    ah,BYTE PTR [esi+0x410c0e0a]
+ 1f4:	c3                   	ret    
+ 1f5:	0e                   	push   cs
+ 1f6:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 1f9:	0e                   	push   cs
+ 1fa:	04 43                	add    al,0x43
+ 1fc:	0b 02                	or     eax,DWORD PTR [edx]
+ 1fe:	ba 0a 0e 0c 41       	mov    edx,0x410c0e0a
+ 203:	c3                   	ret    
+ 204:	0e                   	push   cs
+ 205:	08 41 c6             	or     BYTE PTR [ecx-0x3a],al
+ 208:	0e                   	push   cs
+ 209:	04 44                	add    al,0x44
+ 20b:	0b 24 00             	or     esp,DWORD PTR [eax+eax*1]
+ 20e:	00 00                	add    BYTE PTR [eax],al
+ 210:	10 02                	adc    BYTE PTR [edx],al
+ 212:	00 00                	add    BYTE PTR [eax],al
+ 214:	20 07                	and    BYTE PTR [edi],al
+ 216:	00 00                	add    BYTE PTR [eax],al
+ 218:	e6 00                	out    0x0,al
+ 21a:	00 00                	add    BYTE PTR [eax],al
+ 21c:	00 43 0e             	add    BYTE PTR [ebx+0xe],al
+ 21f:	20 6d 0a             	and    BYTE PTR [ebp+0xa],ch
+ 222:	0e                   	push   cs
+ 223:	04 48                	add    al,0x48
+ 225:	0b 77 0a             	or     esi,DWORD PTR [edi+0xa]
+ 228:	0e                   	push   cs
+ 229:	04 41                	add    al,0x41
+ 22b:	0b 7e 0a             	or     edi,DWORD PTR [esi+0xa]
+ 22e:	0e                   	push   cs
+ 22f:	04 42                	add    al,0x42
+ 231:	0b 00                	or     eax,DWORD PTR [eax]
+	...

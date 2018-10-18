@@ -1,0 +1,19 @@
+GDT.o: GDT.c Clubcos0.h GDT.h AssemblyFunc.h IDT.h
+Keyboard.o: Keyboard.c Clubcos0.h Keyboard.h KeyTable.h AssemblyFunc.h \
+ GDT.h IDT.h Functions.h stdarg.h Queue.h KernelData.h Interrupt.h
+PIC.o: PIC.c Clubcos0.h Interrupt.h IDT.h PIC.h AssemblyFunc.h GDT.h
+Clubcos0.o: Clubcos0.c Clubcos0.h Graphic.h Functions.h stdarg.h GDT.h \
+ IDT.h Interrupt.h PIC.h Keyboard.h KeyTable.h AssemblyFunc.h \
+ KernelData.h Queue.h Mouse.h
+Functions.o: Functions.c Clubcos0.h Functions.h stdarg.h
+Mouse.o: Mouse.c Clubcos0.h Mouse.h Keyboard.h KeyTable.h AssemblyFunc.h \
+ GDT.h IDT.h Queue.h KernelData.h Graphic.h Interrupt.h
+Interrupt.o: Interrupt.c Clubcos0.h Interrupt.h PIC.h Keyboard.h \
+ KeyTable.h Mouse.h Graphic.h Functions.h stdarg.h AssemblyFunc.h GDT.h \
+ IDT.h KernelData.h Queue.h
+IDT.o: IDT.c Clubcos0.h IDT.h AssemblyFunc.h GDT.h
+KernelData.o: KernelData.c Clubcos0.h KernelData.h Queue.h
+Queue.o: Queue.c Clubcos0.h Queue.h
+KeyTable.o: KeyTable.c Keyboard.h Clubcos0.h KeyTable.h
+EnglishFont.o: EnglishFont.c
+Graphic.o: Graphic.c Clubcos0.h Graphic.h Functions.h stdarg.h

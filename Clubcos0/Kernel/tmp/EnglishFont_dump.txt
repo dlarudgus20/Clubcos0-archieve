@@ -1,0 +1,1187 @@
+
+tmp/EnglishFont.o:     file format elf32-i386
+
+
+Disassembly of section .data:
+
+00000000 <g_vucEnglishFont>:
+	...
+     100:	00 10                	add    BYTE PTR [eax],dl
+     102:	10 10                	adc    BYTE PTR [eax],dl
+     104:	10 10                	adc    BYTE PTR [eax],dl
+     106:	10 fe                	adc    dh,bh
+     108:	10 10                	adc    BYTE PTR [eax],dl
+     10a:	10 10                	adc    BYTE PTR [eax],dl
+     10c:	10 10                	adc    BYTE PTR [eax],dl
+     10e:	10 00                	adc    BYTE PTR [eax],al
+     110:	00 00                	add    BYTE PTR [eax],al
+     112:	02 06                	add    al,BYTE PTR [esi]
+     114:	0e                   	push   cs
+     115:	1e                   	push   ds
+     116:	3e                   	ds
+     117:	7e 3e                	jle    157 <g_vucEnglishFont+0x157>
+     119:	1e                   	push   ds
+     11a:	0e                   	push   cs
+     11b:	06                   	push   es
+     11c:	02 00                	add    al,BYTE PTR [eax]
+     11e:	00 00                	add    BYTE PTR [eax],al
+     120:	00 10                	add    BYTE PTR [eax],dl
+     122:	38 54 10 10          	cmp    BYTE PTR [eax+edx*1+0x10],dl
+     126:	10 10                	adc    BYTE PTR [eax],dl
+     128:	10 10                	adc    BYTE PTR [eax],dl
+     12a:	10 54 38 10          	adc    BYTE PTR [eax+edi*1+0x10],dl
+     12e:	00 00                	add    BYTE PTR [eax],al
+     130:	00 00                	add    BYTE PTR [eax],al
+     132:	24 24                	and    al,0x24
+     134:	24 24                	and    al,0x24
+     136:	24 24                	and    al,0x24
+     138:	24 24                	and    al,0x24
+     13a:	00 00                	add    BYTE PTR [eax],al
+     13c:	24 24                	and    al,0x24
+     13e:	00 00                	add    BYTE PTR [eax],al
+     140:	00 00                	add    BYTE PTR [eax],al
+     142:	34 54                	xor    al,0x54
+     144:	54                   	push   esp
+     145:	54                   	push   esp
+     146:	54                   	push   esp
+     147:	54                   	push   esp
+     148:	34 14                	xor    al,0x14
+     14a:	14 14                	adc    al,0x14
+     14c:	14 14                	adc    al,0x14
+     14e:	00 00                	add    BYTE PTR [eax],al
+     150:	00 10                	add    BYTE PTR [eax],dl
+     152:	10 10                	adc    BYTE PTR [eax],dl
+     154:	10 10                	adc    BYTE PTR [eax],dl
+     156:	10 fe                	adc    dh,bh
+	...
+     164:	00 00                	add    BYTE PTR [eax],al
+     166:	00 fe                	add    dh,bh
+     168:	10 10                	adc    BYTE PTR [eax],dl
+     16a:	10 10                	adc    BYTE PTR [eax],dl
+     16c:	10 10                	adc    BYTE PTR [eax],dl
+     16e:	10 00                	adc    BYTE PTR [eax],al
+     170:	00 10                	add    BYTE PTR [eax],dl
+     172:	10 10                	adc    BYTE PTR [eax],dl
+     174:	10 10                	adc    BYTE PTR [eax],dl
+     176:	10 f0                	adc    al,dh
+     178:	10 10                	adc    BYTE PTR [eax],dl
+     17a:	10 10                	adc    BYTE PTR [eax],dl
+     17c:	10 10                	adc    BYTE PTR [eax],dl
+     17e:	10 00                	adc    BYTE PTR [eax],al
+     180:	00 00                	add    BYTE PTR [eax],al
+     182:	10 38                	adc    BYTE PTR [eax],bh
+     184:	54                   	push   esp
+     185:	10 10                	adc    BYTE PTR [eax],dl
+     187:	10 10                	adc    BYTE PTR [eax],dl
+     189:	10 10                	adc    BYTE PTR [eax],dl
+     18b:	10 10                	adc    BYTE PTR [eax],dl
+     18d:	10 00                	adc    BYTE PTR [eax],al
+     18f:	00 00                	add    BYTE PTR [eax],al
+     191:	10 10                	adc    BYTE PTR [eax],dl
+     193:	10 10                	adc    BYTE PTR [eax],dl
+     195:	10 10                	adc    BYTE PTR [eax],dl
+     197:	1e                   	push   ds
+     198:	10 10                	adc    BYTE PTR [eax],dl
+     19a:	10 10                	adc    BYTE PTR [eax],dl
+     19c:	10 10                	adc    BYTE PTR [eax],dl
+     19e:	10 00                	adc    BYTE PTR [eax],al
+     1a0:	00 00                	add    BYTE PTR [eax],al
+     1a2:	00 00                	add    BYTE PTR [eax],al
+     1a4:	00 00                	add    BYTE PTR [eax],al
+     1a6:	08 04 7e             	or     BYTE PTR [esi+edi*2],al
+     1a9:	04 08                	add    al,0x8
+	...
+     1b3:	00 00                	add    BYTE PTR [eax],al
+     1b5:	00 10                	add    BYTE PTR [eax],dl
+     1b7:	20 7e 20             	and    BYTE PTR [esi+0x20],bh
+     1ba:	10 00                	adc    BYTE PTR [eax],al
+	...
+     210:	00 00                	add    BYTE PTR [eax],al
+     212:	00 18                	add    BYTE PTR [eax],bl
+     214:	18 18                	sbb    BYTE PTR [eax],bl
+     216:	18 18                	sbb    BYTE PTR [eax],bl
+     218:	18 18                	sbb    BYTE PTR [eax],bl
+     21a:	10 00                	adc    BYTE PTR [eax],al
+     21c:	18 18                	sbb    BYTE PTR [eax],bl
+     21e:	00 00                	add    BYTE PTR [eax],al
+     220:	00 00                	add    BYTE PTR [eax],al
+     222:	24 24                	and    al,0x24
+     224:	24 00                	and    al,0x0
+	...
+     232:	00 14 14             	add    BYTE PTR [esp+edx*1],dl
+     235:	14 7f                	adc    al,0x7f
+     237:	14 24                	adc    al,0x24
+     239:	24 fe                	and    al,0xfe
+     23b:	28 28                	sub    BYTE PTR [eax],ch
+     23d:	28 00                	sub    BYTE PTR [eax],al
+     23f:	00 00                	add    BYTE PTR [eax],al
+     241:	00 00                	add    BYTE PTR [eax],al
+     243:	3e                   	ds
+     244:	68 48 48 30 18       	push   0x18304848
+     249:	0c 0a                	or     al,0xa
+     24b:	0a 0e                	or     cl,BYTE PTR [esi]
+     24d:	7c 00                	jl     24f <g_vucEnglishFont+0x24f>
+     24f:	00 00                	add    BYTE PTR [eax],al
+     251:	00 70 48             	add    BYTE PTR [eax+0x48],dh
+     254:	88 4b 76             	mov    BYTE PTR [ebx+0x76],cl
+     257:	08 10                	or     BYTE PTR [eax],dl
+     259:	6e                   	outs   dx,BYTE PTR ds:[esi]
+     25a:	d2 11                	rcl    BYTE PTR [ecx],cl
+     25c:	12 0e                	adc    cl,BYTE PTR [esi]
+     25e:	00 00                	add    BYTE PTR [eax],al
+     260:	00 00                	add    BYTE PTR [eax],al
+     262:	00 38                	add    BYTE PTR [eax],bh
+     264:	64                   	fs
+     265:	44                   	inc    esp
+     266:	2c 38                	sub    al,0x38
+     268:	72 4a                	jb     2b4 <g_vucEnglishFont+0x2b4>
+     26a:	8e c6                	mov    es,esi
+     26c:	46                   	inc    esi
+     26d:	3b 00                	cmp    eax,DWORD PTR [eax]
+     26f:	00 00                	add    BYTE PTR [eax],al
+     271:	00 18                	add    BYTE PTR [eax],bl
+     273:	18 18                	sbb    BYTE PTR [eax],bl
+	...
+     27d:	00 00                	add    BYTE PTR [eax],al
+     27f:	00 04 08             	add    BYTE PTR [eax+ecx*1],al
+     282:	10 10                	adc    BYTE PTR [eax],dl
+     284:	10 20                	adc    BYTE PTR [eax],ah
+     286:	20 20                	and    BYTE PTR [eax],ah
+     288:	20 20                	and    BYTE PTR [eax],ah
+     28a:	20 10                	and    BYTE PTR [eax],dl
+     28c:	10 10                	adc    BYTE PTR [eax],dl
+     28e:	08 04 20             	or     BYTE PTR [eax+eiz*1],al
+     291:	10 10                	adc    BYTE PTR [eax],dl
+     293:	08 08                	or     BYTE PTR [eax],cl
+     295:	04 04                	add    al,0x4
+     297:	04 04                	add    al,0x4
+     299:	04 04                	add    al,0x4
+     29b:	08 08                	or     BYTE PTR [eax],cl
+     29d:	10 10                	adc    BYTE PTR [eax],dl
+     29f:	20 00                	and    BYTE PTR [eax],al
+     2a1:	00 00                	add    BYTE PTR [eax],al
+     2a3:	00 18                	add    BYTE PTR [eax],bl
+     2a5:	18 d2                	sbb    dl,dl
+     2a7:	3c 18                	cmp    al,0x18
+     2a9:	24 24                	and    al,0x24
+	...
+     2b3:	00 00                	add    BYTE PTR [eax],al
+     2b5:	18 18                	sbb    BYTE PTR [eax],bl
+     2b7:	18 ff                	sbb    bh,bh
+     2b9:	18 18                	sbb    BYTE PTR [eax],bl
+     2bb:	18 00                	sbb    BYTE PTR [eax],al
+	...
+     2c9:	00 00                	add    BYTE PTR [eax],al
+     2cb:	00 08                	add    BYTE PTR [eax],cl
+     2cd:	18 10                	sbb    BYTE PTR [eax],dl
+     2cf:	20 00                	and    BYTE PTR [eax],al
+     2d1:	00 00                	add    BYTE PTR [eax],al
+     2d3:	00 00                	add    BYTE PTR [eax],al
+     2d5:	00 00                	add    BYTE PTR [eax],al
+     2d7:	00 7e 00             	add    BYTE PTR [esi+0x0],bh
+	...
+     2ea:	00 00                	add    BYTE PTR [eax],al
+     2ec:	18 18                	sbb    BYTE PTR [eax],bl
+     2ee:	00 00                	add    BYTE PTR [eax],al
+     2f0:	00 00                	add    BYTE PTR [eax],al
+     2f2:	02 04 04             	add    al,BYTE PTR [esp+eax*1]
+     2f5:	0c 08                	or     al,0x8
+     2f7:	08 10                	or     BYTE PTR [eax],dl
+     2f9:	10 30                	adc    BYTE PTR [eax],dh
+     2fb:	20 20                	and    BYTE PTR [eax],ah
+     2fd:	40                   	inc    eax
+     2fe:	00 00                	add    BYTE PTR [eax],al
+     300:	00 00                	add    BYTE PTR [eax],al
+     302:	00 3c 24             	add    BYTE PTR [esp],bh
+     305:	42                   	inc    edx
+     306:	42                   	inc    edx
+     307:	5a                   	pop    edx
+     308:	5a                   	pop    edx
+     309:	5a                   	pop    edx
+     30a:	42                   	inc    edx
+     30b:	42                   	inc    edx
+     30c:	26                   	es
+     30d:	3c 00                	cmp    al,0x0
+     30f:	00 00                	add    BYTE PTR [eax],al
+     311:	00 00                	add    BYTE PTR [eax],al
+     313:	18 38                	sbb    BYTE PTR [eax],bh
+     315:	68 08 08 08 08       	push   0x8080808
+     31a:	08 08                	or     BYTE PTR [eax],cl
+     31c:	08 08                	or     BYTE PTR [eax],cl
+     31e:	00 00                	add    BYTE PTR [eax],al
+     320:	00 00                	add    BYTE PTR [eax],al
+     322:	00 3c 46             	add    BYTE PTR [esi+eax*2],bh
+     325:	02 02                	add    al,BYTE PTR [edx]
+     327:	06                   	push   es
+     328:	04 08                	add    al,0x8
+     32a:	10 30                	adc    BYTE PTR [eax],dh
+     32c:	60                   	pusha  
+     32d:	7e 00                	jle    32f <g_vucEnglishFont+0x32f>
+     32f:	00 00                	add    BYTE PTR [eax],al
+     331:	00 00                	add    BYTE PTR [eax],al
+     333:	3c 46                	cmp    al,0x46
+     335:	02 02                	add    al,BYTE PTR [edx]
+     337:	06                   	push   es
+     338:	18 06                	sbb    BYTE PTR [esi],al
+     33a:	02 02                	add    al,BYTE PTR [edx]
+     33c:	46                   	inc    esi
+     33d:	3c 00                	cmp    al,0x0
+     33f:	00 00                	add    BYTE PTR [eax],al
+     341:	00 00                	add    BYTE PTR [eax],al
+     343:	0c 1c                	or     al,0x1c
+     345:	14 24                	adc    al,0x24
+     347:	24 44                	and    al,0x44
+     349:	44                   	inc    esp
+     34a:	ff 04 04             	inc    DWORD PTR [esp+eax*1]
+     34d:	04 00                	add    al,0x0
+     34f:	00 00                	add    BYTE PTR [eax],al
+     351:	00 00                	add    BYTE PTR [eax],al
+     353:	7e 60                	jle    3b5 <g_vucEnglishFont+0x3b5>
+     355:	40                   	inc    eax
+     356:	40                   	inc    eax
+     357:	7c 06                	jl     35f <g_vucEnglishFont+0x35f>
+     359:	02 02                	add    al,BYTE PTR [edx]
+     35b:	02 06                	add    al,BYTE PTR [esi]
+     35d:	78 00                	js     35f <g_vucEnglishFont+0x35f>
+     35f:	00 00                	add    BYTE PTR [eax],al
+     361:	00 00                	add    BYTE PTR [eax],al
+     363:	1e                   	push   ds
+     364:	30 60 40             	xor    BYTE PTR [eax+0x40],ah
+     367:	5c                   	pop    esp
+     368:	66 42                	inc    dx
+     36a:	42                   	inc    edx
+     36b:	42                   	inc    edx
+     36c:	26                   	es
+     36d:	3c 00                	cmp    al,0x0
+     36f:	00 00                	add    BYTE PTR [eax],al
+     371:	00 00                	add    BYTE PTR [eax],al
+     373:	7e 02                	jle    377 <g_vucEnglishFont+0x377>
+     375:	06                   	push   es
+     376:	04 04                	add    al,0x4
+     378:	08 08                	or     BYTE PTR [eax],cl
+     37a:	18 10                	sbb    BYTE PTR [eax],dl
+     37c:	10 20                	adc    BYTE PTR [eax],ah
+     37e:	00 00                	add    BYTE PTR [eax],al
+     380:	00 00                	add    BYTE PTR [eax],al
+     382:	00 3c 42             	add    BYTE PTR [edx+eax*2],bh
+     385:	42                   	inc    edx
+     386:	42                   	inc    edx
+     387:	24 3c                	and    al,0x3c
+     389:	42                   	inc    edx
+     38a:	42                   	inc    edx
+     38b:	c2 42 3c             	ret    0x3c42
+     38e:	00 00                	add    BYTE PTR [eax],al
+     390:	00 00                	add    BYTE PTR [eax],al
+     392:	00 3c 66             	add    BYTE PTR [esi+eiz*2],bh
+     395:	42                   	inc    edx
+     396:	42                   	inc    edx
+     397:	42                   	inc    edx
+     398:	66                   	data16
+     399:	3a 02                	cmp    al,BYTE PTR [edx]
+     39b:	06                   	push   es
+     39c:	04 78                	add    al,0x78
+     39e:	00 00                	add    BYTE PTR [eax],al
+     3a0:	00 00                	add    BYTE PTR [eax],al
+     3a2:	00 00                	add    BYTE PTR [eax],al
+     3a4:	00 18                	add    BYTE PTR [eax],bl
+     3a6:	18 00                	sbb    BYTE PTR [eax],al
+     3a8:	00 00                	add    BYTE PTR [eax],al
+     3aa:	00 18                	add    BYTE PTR [eax],bl
+     3ac:	18 00                	sbb    BYTE PTR [eax],al
+     3ae:	00 00                	add    BYTE PTR [eax],al
+     3b0:	00 00                	add    BYTE PTR [eax],al
+     3b2:	00 00                	add    BYTE PTR [eax],al
+     3b4:	00 18                	add    BYTE PTR [eax],bl
+     3b6:	18 00                	sbb    BYTE PTR [eax],al
+     3b8:	00 00                	add    BYTE PTR [eax],al
+     3ba:	00 18                	add    BYTE PTR [eax],bl
+     3bc:	18 10                	sbb    BYTE PTR [eax],dl
+     3be:	20 00                	and    BYTE PTR [eax],al
+     3c0:	00 02                	add    BYTE PTR [edx],al
+     3c2:	04 08                	add    al,0x8
+     3c4:	18 30                	sbb    BYTE PTR [eax],dh
+     3c6:	60                   	pusha  
+     3c7:	40                   	inc    eax
+     3c8:	40                   	inc    eax
+     3c9:	60                   	pusha  
+     3ca:	30 18                	xor    BYTE PTR [eax],bl
+     3cc:	08 04 02             	or     BYTE PTR [edx+eax*1],al
+     3cf:	00 00                	add    BYTE PTR [eax],al
+     3d1:	00 00                	add    BYTE PTR [eax],al
+     3d3:	00 00                	add    BYTE PTR [eax],al
+     3d5:	00 ff                	add    bh,bh
+     3d7:	00 00                	add    BYTE PTR [eax],al
+     3d9:	00 ff                	add    bh,bh
+     3db:	00 00                	add    BYTE PTR [eax],al
+     3dd:	00 00                	add    BYTE PTR [eax],al
+     3df:	00 00                	add    BYTE PTR [eax],al
+     3e1:	40                   	inc    eax
+     3e2:	20 10                	and    BYTE PTR [eax],dl
+     3e4:	18 0c 06             	sbb    BYTE PTR [esi+eax*1],cl
+     3e7:	02 02                	add    al,BYTE PTR [edx]
+     3e9:	06                   	push   es
+     3ea:	0c 18                	or     al,0x18
+     3ec:	10 20                	adc    BYTE PTR [eax],ah
+     3ee:	40                   	inc    eax
+     3ef:	00 00                	add    BYTE PTR [eax],al
+     3f1:	00 7c 06 02          	add    BYTE PTR [esi+eax*1+0x2],bh
+     3f5:	02 04 0c             	add    al,BYTE PTR [esp+ecx*1]
+     3f8:	08 10                	or     BYTE PTR [eax],dl
+     3fa:	10 00                	adc    BYTE PTR [eax],al
+     3fc:	10 10                	adc    BYTE PTR [eax],dl
+     3fe:	00 00                	add    BYTE PTR [eax],al
+     400:	00 00                	add    BYTE PTR [eax],al
+     402:	00 3c 62             	add    BYTE PTR [edx+eiz*2],bh
+     405:	5e                   	pop    esi
+     406:	a5                   	movs   DWORD PTR es:[edi],DWORD PTR ds:[esi]
+     407:	a5                   	movs   DWORD PTR es:[edi],DWORD PTR ds:[esi]
+     408:	a5                   	movs   DWORD PTR es:[edi],DWORD PTR ds:[esi]
+     409:	aa                   	stos   BYTE PTR es:[edi],al
+     40a:	aa                   	stos   BYTE PTR es:[edi],al
+     40b:	76 62                	jbe    46f <g_vucEnglishFont+0x46f>
+     40d:	3c 00                	cmp    al,0x0
+     40f:	00 00                	add    BYTE PTR [eax],al
+     411:	00 00                	add    BYTE PTR [eax],al
+     413:	18 18                	sbb    BYTE PTR [eax],bl
+     415:	18 24 24             	sbb    BYTE PTR [esp],ah
+     418:	24 24                	and    al,0x24
+     41a:	7e 42                	jle    45e <g_vucEnglishFont+0x45e>
+     41c:	42                   	inc    edx
+     41d:	c3                   	ret    
+     41e:	00 00                	add    BYTE PTR [eax],al
+     420:	00 00                	add    BYTE PTR [eax],al
+     422:	00 7c 46 42          	add    BYTE PTR [esi+eax*2+0x42],bh
+     426:	42                   	inc    edx
+     427:	44                   	inc    esp
+     428:	78 46                	js     470 <g_vucEnglishFont+0x470>
+     42a:	42                   	inc    edx
+     42b:	42                   	inc    edx
+     42c:	46                   	inc    esi
+     42d:	7c 00                	jl     42f <g_vucEnglishFont+0x42f>
+     42f:	00 00                	add    BYTE PTR [eax],al
+     431:	00 00                	add    BYTE PTR [eax],al
+     433:	1e                   	push   ds
+     434:	30 60 40             	xor    BYTE PTR [eax+0x40],ah
+     437:	40                   	inc    eax
+     438:	40                   	inc    eax
+     439:	40                   	inc    eax
+     43a:	40                   	inc    eax
+     43b:	60                   	pusha  
+     43c:	30 1e                	xor    BYTE PTR [esi],bl
+     43e:	00 00                	add    BYTE PTR [eax],al
+     440:	00 00                	add    BYTE PTR [eax],al
+     442:	00 78 44             	add    BYTE PTR [eax+0x44],bh
+     445:	42                   	inc    edx
+     446:	42                   	inc    edx
+     447:	42                   	inc    edx
+     448:	42                   	inc    edx
+     449:	42                   	inc    edx
+     44a:	42                   	inc    edx
+     44b:	42                   	inc    edx
+     44c:	44                   	inc    esp
+     44d:	78 00                	js     44f <g_vucEnglishFont+0x44f>
+     44f:	00 00                	add    BYTE PTR [eax],al
+     451:	00 00                	add    BYTE PTR [eax],al
+     453:	7e 40                	jle    495 <g_vucEnglishFont+0x495>
+     455:	40                   	inc    eax
+     456:	40                   	inc    eax
+     457:	40                   	inc    eax
+     458:	7e 40                	jle    49a <g_vucEnglishFont+0x49a>
+     45a:	40                   	inc    eax
+     45b:	40                   	inc    eax
+     45c:	40                   	inc    eax
+     45d:	7e 00                	jle    45f <g_vucEnglishFont+0x45f>
+     45f:	00 00                	add    BYTE PTR [eax],al
+     461:	00 00                	add    BYTE PTR [eax],al
+     463:	7e 40                	jle    4a5 <g_vucEnglishFont+0x4a5>
+     465:	40                   	inc    eax
+     466:	40                   	inc    eax
+     467:	40                   	inc    eax
+     468:	7e 40                	jle    4aa <g_vucEnglishFont+0x4aa>
+     46a:	40                   	inc    eax
+     46b:	40                   	inc    eax
+     46c:	40                   	inc    eax
+     46d:	40                   	inc    eax
+     46e:	00 00                	add    BYTE PTR [eax],al
+     470:	00 00                	add    BYTE PTR [eax],al
+     472:	00 1e                	add    BYTE PTR [esi],bl
+     474:	20 60 40             	and    BYTE PTR [eax+0x40],ah
+     477:	40                   	inc    eax
+     478:	4e                   	dec    esi
+     479:	42                   	inc    edx
+     47a:	42                   	inc    edx
+     47b:	42                   	inc    edx
+     47c:	22 1e                	and    bl,BYTE PTR [esi]
+     47e:	00 00                	add    BYTE PTR [eax],al
+     480:	00 00                	add    BYTE PTR [eax],al
+     482:	00 42 42             	add    BYTE PTR [edx+0x42],al
+     485:	42                   	inc    edx
+     486:	42                   	inc    edx
+     487:	42                   	inc    edx
+     488:	7e 42                	jle    4cc <g_vucEnglishFont+0x4cc>
+     48a:	42                   	inc    edx
+     48b:	42                   	inc    edx
+     48c:	42                   	inc    edx
+     48d:	42                   	inc    edx
+     48e:	00 00                	add    BYTE PTR [eax],al
+     490:	00 00                	add    BYTE PTR [eax],al
+     492:	00 3c 18             	add    BYTE PTR [eax+ebx*1],bh
+     495:	18 18                	sbb    BYTE PTR [eax],bl
+     497:	18 18                	sbb    BYTE PTR [eax],bl
+     499:	18 18                	sbb    BYTE PTR [eax],bl
+     49b:	18 18                	sbb    BYTE PTR [eax],bl
+     49d:	3c 00                	cmp    al,0x0
+     49f:	00 00                	add    BYTE PTR [eax],al
+     4a1:	00 00                	add    BYTE PTR [eax],al
+     4a3:	7c 04                	jl     4a9 <g_vucEnglishFont+0x4a9>
+     4a5:	04 04                	add    al,0x4
+     4a7:	04 04                	add    al,0x4
+     4a9:	04 04                	add    al,0x4
+     4ab:	44                   	inc    esp
+     4ac:	44                   	inc    esp
+     4ad:	38 00                	cmp    BYTE PTR [eax],al
+     4af:	00 00                	add    BYTE PTR [eax],al
+     4b1:	00 00                	add    BYTE PTR [eax],al
+     4b3:	62 64 64 68          	bound  esp,QWORD PTR [esp+eiz*2+0x68]
+     4b7:	70 78                	jo     531 <g_vucEnglishFont+0x531>
+     4b9:	68 6c 64 62 62       	push   0x6262646c
+     4be:	00 00                	add    BYTE PTR [eax],al
+     4c0:	00 00                	add    BYTE PTR [eax],al
+     4c2:	00 20                	add    BYTE PTR [eax],ah
+     4c4:	20 20                	and    BYTE PTR [eax],ah
+     4c6:	20 20                	and    BYTE PTR [eax],ah
+     4c8:	20 20                	and    BYTE PTR [eax],ah
+     4ca:	20 20                	and    BYTE PTR [eax],ah
+     4cc:	20 3e                	and    BYTE PTR [esi],bh
+     4ce:	00 00                	add    BYTE PTR [eax],al
+     4d0:	00 00                	add    BYTE PTR [eax],al
+     4d2:	00 66 66             	add    BYTE PTR [esi+0x66],ah
+     4d5:	66 66 66 5a          	data32 data32 pop dx
+     4d9:	5a                   	pop    edx
+     4da:	5a                   	pop    edx
+     4db:	5a                   	pop    edx
+     4dc:	5a                   	pop    edx
+     4dd:	42                   	inc    edx
+     4de:	00 00                	add    BYTE PTR [eax],al
+     4e0:	00 00                	add    BYTE PTR [eax],al
+     4e2:	00 62 62             	add    BYTE PTR [edx+0x62],ah
+     4e5:	62 52 52             	bound  edx,QWORD PTR [edx+0x52]
+     4e8:	52                   	push   edx
+     4e9:	4a                   	dec    edx
+     4ea:	4a                   	dec    edx
+     4eb:	46                   	inc    esi
+     4ec:	46                   	inc    esi
+     4ed:	46                   	inc    esi
+     4ee:	00 00                	add    BYTE PTR [eax],al
+     4f0:	00 00                	add    BYTE PTR [eax],al
+     4f2:	00 3c 66             	add    BYTE PTR [esi+eiz*2],bh
+     4f5:	42                   	inc    edx
+     4f6:	42                   	inc    edx
+     4f7:	42                   	inc    edx
+     4f8:	42                   	inc    edx
+     4f9:	42                   	inc    edx
+     4fa:	42                   	inc    edx
+     4fb:	42                   	inc    edx
+     4fc:	66                   	data16
+     4fd:	3c 00                	cmp    al,0x0
+     4ff:	00 00                	add    BYTE PTR [eax],al
+     501:	00 00                	add    BYTE PTR [eax],al
+     503:	7c 42                	jl     547 <g_vucEnglishFont+0x547>
+     505:	43                   	inc    ebx
+     506:	43                   	inc    ebx
+     507:	42                   	inc    edx
+     508:	7c 40                	jl     54a <g_vucEnglishFont+0x54a>
+     50a:	40                   	inc    eax
+     50b:	40                   	inc    eax
+     50c:	40                   	inc    eax
+     50d:	40                   	inc    eax
+     50e:	00 00                	add    BYTE PTR [eax],al
+     510:	00 00                	add    BYTE PTR [eax],al
+     512:	00 3c 66             	add    BYTE PTR [esi+eiz*2],bh
+     515:	42                   	inc    edx
+     516:	42                   	inc    edx
+     517:	42                   	inc    edx
+     518:	42                   	inc    edx
+     519:	42                   	inc    edx
+     51a:	42                   	inc    edx
+     51b:	42                   	inc    edx
+     51c:	66                   	data16
+     51d:	3c 06                	cmp    al,0x6
+     51f:	03 00                	add    eax,DWORD PTR [eax]
+     521:	00 00                	add    BYTE PTR [eax],al
+     523:	7c 46                	jl     56b <g_vucEnglishFont+0x56b>
+     525:	42                   	inc    edx
+     526:	42                   	inc    edx
+     527:	46                   	inc    esi
+     528:	78 4c                	js     576 <g_vucEnglishFont+0x576>
+     52a:	44                   	inc    esp
+     52b:	46                   	inc    esi
+     52c:	42                   	inc    edx
+     52d:	43                   	inc    ebx
+     52e:	00 00                	add    BYTE PTR [eax],al
+     530:	00 00                	add    BYTE PTR [eax],al
+     532:	00 3c 60             	add    BYTE PTR [eax+eiz*2],bh
+     535:	40                   	inc    eax
+     536:	40                   	inc    eax
+     537:	30 18                	xor    BYTE PTR [eax],bl
+     539:	04 02                	add    al,0x2
+     53b:	02 06                	add    al,BYTE PTR [esi]
+     53d:	7c 00                	jl     53f <g_vucEnglishFont+0x53f>
+     53f:	00 00                	add    BYTE PTR [eax],al
+     541:	00 00                	add    BYTE PTR [eax],al
+     543:	ff 18                	call   FWORD PTR [eax]
+     545:	18 18                	sbb    BYTE PTR [eax],bl
+     547:	18 18                	sbb    BYTE PTR [eax],bl
+     549:	18 18                	sbb    BYTE PTR [eax],bl
+     54b:	18 18                	sbb    BYTE PTR [eax],bl
+     54d:	18 00                	sbb    BYTE PTR [eax],al
+     54f:	00 00                	add    BYTE PTR [eax],al
+     551:	00 00                	add    BYTE PTR [eax],al
+     553:	42                   	inc    edx
+     554:	42                   	inc    edx
+     555:	42                   	inc    edx
+     556:	42                   	inc    edx
+     557:	42                   	inc    edx
+     558:	42                   	inc    edx
+     559:	42                   	inc    edx
+     55a:	42                   	inc    edx
+     55b:	42                   	inc    edx
+     55c:	66                   	data16
+     55d:	3c 00                	cmp    al,0x0
+     55f:	00 00                	add    BYTE PTR [eax],al
+     561:	00 00                	add    BYTE PTR [eax],al
+     563:	42                   	inc    edx
+     564:	42                   	inc    edx
+     565:	42                   	inc    edx
+     566:	66                   	data16
+     567:	24 24                	and    al,0x24
+     569:	24 2c                	and    al,0x2c
+     56b:	18 18                	sbb    BYTE PTR [eax],bl
+     56d:	18 00                	sbb    BYTE PTR [eax],al
+     56f:	00 00                	add    BYTE PTR [eax],al
+     571:	00 00                	add    BYTE PTR [eax],al
+     573:	81 9b 5a 5a 5a 5a 5a 	sbb    DWORD PTR [ebx+0x5a5a5a5a],0x66666a5a
+     57a:	6a 66 66 
+     57d:	64 00 00             	add    BYTE PTR fs:[eax],al
+     580:	00 00                	add    BYTE PTR [eax],al
+     582:	00 42 66             	add    BYTE PTR [edx+0x66],al
+     585:	24 1c                	and    al,0x1c
+     587:	18 18                	sbb    BYTE PTR [eax],bl
+     589:	18 24 24             	sbb    BYTE PTR [esp],ah
+     58c:	42                   	inc    edx
+     58d:	42                   	inc    edx
+     58e:	00 00                	add    BYTE PTR [eax],al
+     590:	00 00                	add    BYTE PTR [eax],al
+     592:	00 42 42             	add    BYTE PTR [edx+0x42],al
+     595:	24 24                	and    al,0x24
+     597:	18 18                	sbb    BYTE PTR [eax],bl
+     599:	18 18                	sbb    BYTE PTR [eax],bl
+     59b:	18 18                	sbb    BYTE PTR [eax],bl
+     59d:	18 00                	sbb    BYTE PTR [eax],al
+     59f:	00 00                	add    BYTE PTR [eax],al
+     5a1:	00 00                	add    BYTE PTR [eax],al
+     5a3:	7e 06                	jle    5ab <g_vucEnglishFont+0x5ab>
+     5a5:	04 0c                	add    al,0xc
+     5a7:	08 10                	or     BYTE PTR [eax],dl
+     5a9:	10 20                	adc    BYTE PTR [eax],ah
+     5ab:	20 40 7e             	and    BYTE PTR [eax+0x7e],al
+     5ae:	00 00                	add    BYTE PTR [eax],al
+     5b0:	18 10                	sbb    BYTE PTR [eax],dl
+     5b2:	10 10                	adc    BYTE PTR [eax],dl
+     5b4:	10 10                	adc    BYTE PTR [eax],dl
+     5b6:	10 10                	adc    BYTE PTR [eax],dl
+     5b8:	10 10                	adc    BYTE PTR [eax],dl
+     5ba:	10 10                	adc    BYTE PTR [eax],dl
+     5bc:	10 10                	adc    BYTE PTR [eax],dl
+     5be:	10 18                	adc    BYTE PTR [eax],bl
+     5c0:	00 00                	add    BYTE PTR [eax],al
+     5c2:	40                   	inc    eax
+     5c3:	20 20                	and    BYTE PTR [eax],ah
+     5c5:	30 10                	xor    BYTE PTR [eax],dl
+     5c7:	10 08                	adc    BYTE PTR [eax],cl
+     5c9:	08 0c 04             	or     BYTE PTR [esp+eax*1],cl
+     5cc:	04 02                	add    al,0x2
+     5ce:	00 00                	add    BYTE PTR [eax],al
+     5d0:	18 08                	sbb    BYTE PTR [eax],cl
+     5d2:	08 08                	or     BYTE PTR [eax],cl
+     5d4:	08 08                	or     BYTE PTR [eax],cl
+     5d6:	08 08                	or     BYTE PTR [eax],cl
+     5d8:	08 08                	or     BYTE PTR [eax],cl
+     5da:	08 08                	or     BYTE PTR [eax],cl
+     5dc:	08 08                	or     BYTE PTR [eax],cl
+     5de:	08 18                	or     BYTE PTR [eax],bl
+     5e0:	00 00                	add    BYTE PTR [eax],al
+     5e2:	18 18                	sbb    BYTE PTR [eax],bl
+     5e4:	24 24                	and    al,0x24
+     5e6:	42                   	inc    edx
+     5e7:	42                   	inc    edx
+	...
+     5fc:	00 00                	add    BYTE PTR [eax],al
+     5fe:	00 ff                	add    bh,bh
+     600:	30 18                	xor    BYTE PTR [eax],bl
+     602:	08 0c 00             	or     BYTE PTR [eax+eax*1],cl
+	...
+     615:	00 3c 06             	add    BYTE PTR [esi+eax*1],bh
+     618:	02 3e                	add    bh,BYTE PTR [esi]
+     61a:	62 42 46             	bound  eax,QWORD PTR [edx+0x46]
+     61d:	3a 00                	cmp    al,BYTE PTR [eax]
+     61f:	00 00                	add    BYTE PTR [eax],al
+     621:	00 40 40             	add    BYTE PTR [eax+0x40],al
+     624:	40                   	inc    eax
+     625:	40                   	inc    eax
+     626:	5c                   	pop    esp
+     627:	66 42                	inc    dx
+     629:	42                   	inc    edx
+     62a:	42                   	inc    edx
+     62b:	42                   	inc    edx
+     62c:	66 5c                	pop    sp
+	...
+     636:	1e                   	push   ds
+     637:	20 40 40             	and    BYTE PTR [eax+0x40],al
+     63a:	40                   	inc    eax
+     63b:	40                   	inc    eax
+     63c:	20 1e                	and    BYTE PTR [esi],bl
+     63e:	00 00                	add    BYTE PTR [eax],al
+     640:	00 00                	add    BYTE PTR [eax],al
+     642:	02 02                	add    al,BYTE PTR [edx]
+     644:	02 02                	add    al,BYTE PTR [edx]
+     646:	3a 66 42             	cmp    ah,BYTE PTR [esi+0x42]
+     649:	42                   	inc    edx
+     64a:	42                   	inc    edx
+     64b:	42                   	inc    edx
+     64c:	66                   	data16
+     64d:	3a 00                	cmp    al,BYTE PTR [eax]
+     64f:	00 00                	add    BYTE PTR [eax],al
+     651:	00 00                	add    BYTE PTR [eax],al
+     653:	00 00                	add    BYTE PTR [eax],al
+     655:	00 3c 62             	add    BYTE PTR [edx+eiz*2],bh
+     658:	42                   	inc    edx
+     659:	7e 40                	jle    69b <g_vucEnglishFont+0x69b>
+     65b:	40                   	inc    eax
+     65c:	60                   	pusha  
+     65d:	3e 00 00             	add    BYTE PTR ds:[eax],al
+     660:	00 00                	add    BYTE PTR [eax],al
+     662:	0e                   	push   cs
+     663:	10 10                	adc    BYTE PTR [eax],dl
+     665:	10 7e 10             	adc    BYTE PTR [esi+0x10],bh
+     668:	10 10                	adc    BYTE PTR [eax],dl
+     66a:	10 10                	adc    BYTE PTR [eax],dl
+     66c:	10 10                	adc    BYTE PTR [eax],dl
+	...
+     676:	3a 66 42             	cmp    ah,BYTE PTR [esi+0x42]
+     679:	42                   	inc    edx
+     67a:	42                   	inc    edx
+     67b:	66                   	data16
+     67c:	3a 02                	cmp    al,BYTE PTR [edx]
+     67e:	04 78                	add    al,0x78
+     680:	00 00                	add    BYTE PTR [eax],al
+     682:	40                   	inc    eax
+     683:	40                   	inc    eax
+     684:	40                   	inc    eax
+     685:	40                   	inc    eax
+     686:	5c                   	pop    esp
+     687:	66 42                	inc    dx
+     689:	42                   	inc    edx
+     68a:	42                   	inc    edx
+     68b:	42                   	inc    edx
+     68c:	42                   	inc    edx
+     68d:	42                   	inc    edx
+     68e:	00 00                	add    BYTE PTR [eax],al
+     690:	00 00                	add    BYTE PTR [eax],al
+     692:	18 18                	sbb    BYTE PTR [eax],bl
+     694:	00 00                	add    BYTE PTR [eax],al
+     696:	78 08                	js     6a0 <g_vucEnglishFont+0x6a0>
+     698:	08 08                	or     BYTE PTR [eax],cl
+     69a:	08 08                	or     BYTE PTR [eax],cl
+     69c:	08 7e 00             	or     BYTE PTR [esi+0x0],bh
+     69f:	00 00                	add    BYTE PTR [eax],al
+     6a1:	00 08                	add    BYTE PTR [eax],cl
+     6a3:	08 00                	or     BYTE PTR [eax],al
+     6a5:	00 38                	add    BYTE PTR [eax],bh
+     6a7:	08 08                	or     BYTE PTR [eax],cl
+     6a9:	08 08                	or     BYTE PTR [eax],cl
+     6ab:	08 48 48             	or     BYTE PTR [eax+0x48],cl
+     6ae:	48                   	dec    eax
+     6af:	78 00                	js     6b1 <g_vucEnglishFont+0x6b1>
+     6b1:	00 60 60             	add    BYTE PTR [eax+0x60],ah
+     6b4:	60                   	pusha  
+     6b5:	60                   	pusha  
+     6b6:	62 64 68 70          	bound  esp,QWORD PTR [eax+ebp*2+0x70]
+     6ba:	68 64 64 62 00       	push   0x626464
+     6bf:	00 00                	add    BYTE PTR [eax],al
+     6c1:	00 38                	add    BYTE PTR [eax],bh
+     6c3:	18 18                	sbb    BYTE PTR [eax],bl
+     6c5:	18 18                	sbb    BYTE PTR [eax],bl
+     6c7:	18 18                	sbb    BYTE PTR [eax],bl
+     6c9:	18 18                	sbb    BYTE PTR [eax],bl
+     6cb:	18 18                	sbb    BYTE PTR [eax],bl
+     6cd:	7e 00                	jle    6cf <g_vucEnglishFont+0x6cf>
+     6cf:	00 00                	add    BYTE PTR [eax],al
+     6d1:	00 00                	add    BYTE PTR [eax],al
+     6d3:	00 00                	add    BYTE PTR [eax],al
+     6d5:	00 76 5a             	add    BYTE PTR [esi+0x5a],dh
+     6d8:	5a                   	pop    edx
+     6d9:	4a                   	dec    edx
+     6da:	4a                   	dec    edx
+     6db:	4a                   	dec    edx
+     6dc:	4a                   	dec    edx
+     6dd:	4a                   	dec    edx
+	...
+     6e6:	5c                   	pop    esp
+     6e7:	66 42                	inc    dx
+     6e9:	42                   	inc    edx
+     6ea:	42                   	inc    edx
+     6eb:	42                   	inc    edx
+     6ec:	42                   	inc    edx
+     6ed:	42                   	inc    edx
+	...
+     6f6:	3c 66                	cmp    al,0x66
+     6f8:	42                   	inc    edx
+     6f9:	42                   	inc    edx
+     6fa:	42                   	inc    edx
+     6fb:	42                   	inc    edx
+     6fc:	66                   	data16
+     6fd:	3c 00                	cmp    al,0x0
+     6ff:	00 00                	add    BYTE PTR [eax],al
+     701:	00 00                	add    BYTE PTR [eax],al
+     703:	00 00                	add    BYTE PTR [eax],al
+     705:	00 5c 66 42          	add    BYTE PTR [esi+eiz*2+0x42],bl
+     709:	42                   	inc    edx
+     70a:	42                   	inc    edx
+     70b:	42                   	inc    edx
+     70c:	66 5c                	pop    sp
+     70e:	40                   	inc    eax
+     70f:	40                   	inc    eax
+     710:	00 00                	add    BYTE PTR [eax],al
+     712:	00 00                	add    BYTE PTR [eax],al
+     714:	00 00                	add    BYTE PTR [eax],al
+     716:	3a 66 42             	cmp    ah,BYTE PTR [esi+0x42]
+     719:	42                   	inc    edx
+     71a:	42                   	inc    edx
+     71b:	42                   	inc    edx
+     71c:	66                   	data16
+     71d:	3a 02                	cmp    al,BYTE PTR [edx]
+     71f:	02 00                	add    al,BYTE PTR [eax]
+     721:	00 00                	add    BYTE PTR [eax],al
+     723:	00 00                	add    BYTE PTR [eax],al
+     725:	00 6f 30             	add    BYTE PTR [edi+0x30],ch
+     728:	30 20                	xor    BYTE PTR [eax],ah
+     72a:	20 20                	and    BYTE PTR [eax],ah
+     72c:	20 78 00             	and    BYTE PTR [eax+0x0],bh
+     72f:	00 00                	add    BYTE PTR [eax],al
+     731:	00 00                	add    BYTE PTR [eax],al
+     733:	00 00                	add    BYTE PTR [eax],al
+     735:	00 3c 60             	add    BYTE PTR [eax+eiz*2],bh
+     738:	60                   	pusha  
+     739:	30 0c 02             	xor    BYTE PTR [edx+eax*1],cl
+     73c:	06                   	push   es
+     73d:	7c 00                	jl     73f <g_vucEnglishFont+0x73f>
+     73f:	00 00                	add    BYTE PTR [eax],al
+     741:	00 00                	add    BYTE PTR [eax],al
+     743:	10 10                	adc    BYTE PTR [eax],dl
+     745:	10 7e 10             	adc    BYTE PTR [esi+0x10],bh
+     748:	10 10                	adc    BYTE PTR [eax],dl
+     74a:	10 10                	adc    BYTE PTR [eax],dl
+     74c:	10 0e                	adc    BYTE PTR [esi],cl
+	...
+     756:	42                   	inc    edx
+     757:	42                   	inc    edx
+     758:	42                   	inc    edx
+     759:	42                   	inc    edx
+     75a:	42                   	inc    edx
+     75b:	42                   	inc    edx
+     75c:	66                   	data16
+     75d:	3a 00                	cmp    al,BYTE PTR [eax]
+     75f:	00 00                	add    BYTE PTR [eax],al
+     761:	00 00                	add    BYTE PTR [eax],al
+     763:	00 00                	add    BYTE PTR [eax],al
+     765:	00 42 42             	add    BYTE PTR [edx+0x42],al
+     768:	64                   	fs
+     769:	24 24                	and    al,0x24
+     76b:	38 18                	cmp    BYTE PTR [eax],bl
+     76d:	18 00                	sbb    BYTE PTR [eax],al
+     76f:	00 00                	add    BYTE PTR [eax],al
+     771:	00 00                	add    BYTE PTR [eax],al
+     773:	00 00                	add    BYTE PTR [eax],al
+     775:	00 c2                	add    dl,al
+     777:	5a                   	pop    edx
+     778:	5a                   	pop    edx
+     779:	5a                   	pop    edx
+     77a:	5a                   	pop    edx
+     77b:	6a 6c                	push   0x6c
+     77d:	24 00                	and    al,0x0
+     77f:	00 00                	add    BYTE PTR [eax],al
+     781:	00 00                	add    BYTE PTR [eax],al
+     783:	00 00                	add    BYTE PTR [eax],al
+     785:	00 42 24             	add    BYTE PTR [edx+0x24],al
+     788:	18 18                	sbb    BYTE PTR [eax],bl
+     78a:	18 24 24             	sbb    BYTE PTR [esp],ah
+     78d:	42                   	inc    edx
+	...
+     796:	42                   	inc    edx
+     797:	42                   	inc    edx
+     798:	24 24                	and    al,0x24
+     79a:	38 18                	cmp    BYTE PTR [eax],bl
+     79c:	18 10                	sbb    BYTE PTR [eax],dl
+     79e:	10 60 00             	adc    BYTE PTR [eax+0x0],ah
+     7a1:	00 00                	add    BYTE PTR [eax],al
+     7a3:	00 00                	add    BYTE PTR [eax],al
+     7a5:	00 7e 06             	add    BYTE PTR [esi+0x6],bh
+     7a8:	04 08                	add    al,0x8
+     7aa:	10 20                	adc    BYTE PTR [eax],ah
+     7ac:	60                   	pusha  
+     7ad:	7e 00                	jle    7af <g_vucEnglishFont+0x7af>
+     7af:	00 0c 18             	add    BYTE PTR [eax+ebx*1],cl
+     7b2:	10 10                	adc    BYTE PTR [eax],dl
+     7b4:	10 10                	adc    BYTE PTR [eax],dl
+     7b6:	10 30                	adc    BYTE PTR [eax],dh
+     7b8:	30 10                	xor    BYTE PTR [eax],dl
+     7ba:	10 10                	adc    BYTE PTR [eax],dl
+     7bc:	10 10                	adc    BYTE PTR [eax],dl
+     7be:	18 0c 00             	sbb    BYTE PTR [eax+eax*1],cl
+     7c1:	18 18                	sbb    BYTE PTR [eax],bl
+     7c3:	18 18                	sbb    BYTE PTR [eax],bl
+     7c5:	18 18                	sbb    BYTE PTR [eax],bl
+     7c7:	18 00                	sbb    BYTE PTR [eax],al
+     7c9:	18 18                	sbb    BYTE PTR [eax],bl
+     7cb:	18 18                	sbb    BYTE PTR [eax],bl
+     7cd:	18 18                	sbb    BYTE PTR [eax],bl
+     7cf:	00 30                	add    BYTE PTR [eax],dh
+     7d1:	18 08                	sbb    BYTE PTR [eax],cl
+     7d3:	08 08                	or     BYTE PTR [eax],cl
+     7d5:	08 08                	or     BYTE PTR [eax],cl
+     7d7:	0c 0c                	or     al,0xc
+     7d9:	08 08                	or     BYTE PTR [eax],cl
+     7db:	08 08                	or     BYTE PTR [eax],cl
+     7dd:	08 18                	or     BYTE PTR [eax],bl
+     7df:	30 00                	xor    BYTE PTR [eax],al
+     7e1:	00 00                	add    BYTE PTR [eax],al
+     7e3:	00 00                	add    BYTE PTR [eax],al
+     7e5:	00 00                	add    BYTE PTR [eax],al
+     7e7:	71 8e                	jno    777 <g_vucEnglishFont+0x777>
+	...
+     7f1:	00 00                	add    BYTE PTR [eax],al
+     7f3:	e0 a0                	loopne 795 <g_vucEnglishFont+0x795>
+     7f5:	a0 a0 a0 a0 a0       	mov    al,ds:0xa0a0a0a0
+     7fa:	a0 a0 e0 00 00       	mov    al,ds:0xe0a0
+     7ff:	00 00                	add    BYTE PTR [eax],al
+     801:	00 00                	add    BYTE PTR [eax],al
+     803:	01 02                	add    DWORD PTR [edx],eax
+     805:	06                   	push   es
+     806:	04 0f                	add    al,0xf
+     808:	04 0f                	add    al,0xf
+     80a:	04 06                	add    al,0x6
+     80c:	03 01                	add    eax,DWORD PTR [ecx]
+	...
+     856:	00 31                	add    BYTE PTR [ecx],dh
+     858:	31 00                	xor    DWORD PTR [eax],eax
+	...
+     862:	00 00                	add    BYTE PTR [eax],al
+     864:	01 01                	add    DWORD PTR [ecx],eax
+     866:	07                   	pop    es
+     867:	01 01                	add    DWORD PTR [ecx],eax
+     869:	01 01                	add    DWORD PTR [ecx],eax
+     86b:	01 00                	add    DWORD PTR [eax],eax
+     86d:	00 00                	add    BYTE PTR [eax],al
+     86f:	00 00                	add    BYTE PTR [eax],al
+     871:	00 00                	add    BYTE PTR [eax],al
+     873:	00 01                	add    BYTE PTR [ecx],al
+     875:	03 01                	add    eax,DWORD PTR [ecx]
+     877:	07                   	pop    es
+     878:	01 01                	add    DWORD PTR [ecx],eax
+     87a:	01 01                	add    DWORD PTR [ecx],eax
+     87c:	00 00                	add    BYTE PTR [eax],al
+     87e:	00 00                	add    BYTE PTR [eax],al
+     880:	00 00                	add    BYTE PTR [eax],al
+     882:	00 40 a0             	add    BYTE PTR [eax-0x60],al
+	...
+     891:	00 30                	add    BYTE PTR [eax],dh
+     893:	28 49 49             	sub    BYTE PTR [ecx+0x49],cl
+     896:	4a                   	dec    edx
+     897:	3a 05 0a 0a 12 12    	cmp    al,BYTE PTR ds:0x12120a0a
+     89d:	21 00                	and    DWORD PTR [eax],eax
+	...
+     8b3:	00 00                	add    BYTE PTR [eax],al
+     8b5:	03 04 18             	add    eax,DWORD PTR [eax+ebx*1]
+     8b8:	10 0c 02             	adc    BYTE PTR [edx+eax*1],cl
+     8bb:	01 00                	add    DWORD PTR [eax],eax
+     8bd:	00 00                	add    BYTE PTR [eax],al
+     8bf:	00 00                	add    BYTE PTR [eax],al
+     8c1:	00 07                	add    BYTE PTR [edi],al
+     8c3:	18 30                	sbb    BYTE PTR [eax],dh
+     8c5:	20 20                	and    BYTE PTR [eax],ah
+     8c7:	20 20                	and    BYTE PTR [eax],ah
+     8c9:	20 20                	and    BYTE PTR [eax],ah
+     8cb:	10 18                	adc    BYTE PTR [eax],bl
+     8cd:	07                   	pop    es
+	...
+     912:	01 01                	add    DWORD PTR [ecx],eax
+     914:	01 00                	add    DWORD PTR [eax],eax
+	...
+     91e:	00 00                	add    BYTE PTR [eax],al
+     920:	00 01                	add    BYTE PTR [ecx],al
+     922:	01 00                	add    DWORD PTR [eax],eax
+     924:	01 00                	add    DWORD PTR [eax],eax
+	...
+     92e:	00 00                	add    BYTE PTR [eax],al
+     930:	00 01                	add    BYTE PTR [ecx],al
+     932:	02 03                	add    al,BYTE PTR [ebx]
+     934:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     93e:	00 00                	add    BYTE PTR [eax],al
+     940:	00 03                	add    BYTE PTR [ebx],al
+     942:	03 01                	add    eax,DWORD PTR [ecx]
+     944:	02 00                	add    al,BYTE PTR [eax]
+	...
+     956:	01 03                	add    DWORD PTR [ebx],eax
+     958:	03 01                	add    eax,DWORD PTR [ecx]
+	...
+     966:	00 00                	add    BYTE PTR [eax],al
+     968:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     976:	00 00                	add    BYTE PTR [eax],al
+     978:	7f 00                	jg     97a <g_vucEnglishFont+0x97a>
+	...
+     982:	0f 00 00             	sldt   WORD PTR [eax]
+	...
+     991:	00 3f                	add    BYTE PTR [edi],bh
+     993:	09 09                	or     DWORD PTR [ecx],ecx
+     995:	09 00                	or     DWORD PTR [eax],eax
+	...
+     9af:	00 00                	add    BYTE PTR [eax],al
+     9b1:	20 18                	and    BYTE PTR [eax],bl
+     9b3:	04 03                	add    al,0x3
+     9b5:	00 00                	add    BYTE PTR [eax],al
+     9b7:	00 00                	add    BYTE PTR [eax],al
+     9b9:	00 00                	add    BYTE PTR [eax],al
+     9bb:	01 06                	add    DWORD PTR [esi],eax
+     9bd:	08 30                	or     BYTE PTR [eax],dh
+     9bf:	00 00                	add    BYTE PTR [eax],al
+     9c1:	00 00                	add    BYTE PTR [eax],al
+     9c3:	00 00                	add    BYTE PTR [eax],al
+     9c5:	0e                   	push   cs
+     9c6:	31 21                	xor    DWORD PTR [ecx],esp
+     9c8:	20 20                	and    BYTE PTR [eax],ah
+     9ca:	20 21                	and    BYTE PTR [ecx],ah
+     9cc:	31 0e                	xor    DWORD PTR [esi],ecx
+	...
+     a12:	01 00                	add    DWORD PTR [eax],eax
+     a14:	00 01                	add    BYTE PTR [ecx],al
+     a16:	01 01                	add    DWORD PTR [ecx],eax
+     a18:	01 01                	add    DWORD PTR [ecx],eax
+     a1a:	01 01                	add    DWORD PTR [ecx],eax
+     a1c:	01 01                	add    DWORD PTR [ecx],eax
+	...
+     a42:	00 23                	add    BYTE PTR [ebx],ah
+     a44:	1c 10                	sbb    al,0x10
+     a46:	10 10                	adc    BYTE PTR [eax],dl
+     a48:	10 10                	adc    BYTE PTR [eax],dl
+     a4a:	10 08                	adc    BYTE PTR [eax],cl
+     a4c:	17                   	pop    ss
+     a4d:	20 00                	and    BYTE PTR [eax],al
+	...
+     a6f:	00 00                	add    BYTE PTR [eax],al
+     a71:	00 03                	add    BYTE PTR [ebx],al
+     a73:	02 02                	add    al,BYTE PTR [edx]
+     a75:	01 03                	add    DWORD PTR [ebx],eax
+     a77:	02 02                	add    al,BYTE PTR [edx]
+     a79:	01 00                	add    DWORD PTR [eax],eax
+     a7b:	00 00                	add    BYTE PTR [eax],al
+     a7d:	02 01                	add    al,BYTE PTR [ecx]
+     a7f:	00 00                	add    BYTE PTR [eax],al
+     a81:	00 06                	add    BYTE PTR [esi],al
+     a83:	06                   	push   es
+	...
+     a90:	00 00                	add    BYTE PTR [eax],al
+     a92:	03 0c 13             	add    ecx,DWORD PTR [ebx+edx*1]
+     a95:	16                   	push   ss
+     a96:	24 24                	and    al,0x24
+     a98:	2c 24                	sub    al,0x24
+     a9a:	26 13 0c 07          	adc    ecx,DWORD PTR es:[edi+eax*1]
+     a9e:	00 00                	add    BYTE PTR [eax],al
+     aa0:	00 00                	add    BYTE PTR [eax],al
+     aa2:	03 00                	add    eax,DWORD PTR [eax]
+     aa4:	03 04 03             	add    eax,DWORD PTR [ebx+eax*1]
+     aa7:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     ab1:	00 00                	add    BYTE PTR [eax],al
+     ab3:	00 01                	add    BYTE PTR [ecx],al
+     ab5:	02 0c 13             	add    cl,BYTE PTR [ebx+edx*1]
+     ab8:	12 0d 02 01 00 00    	adc    cl,BYTE PTR ds:0x102
+	...
+     ade:	00 00                	add    BYTE PTR [eax],al
+     ae0:	00 01                	add    BYTE PTR [ecx],al
+     ae2:	06                   	push   es
+     ae3:	08 13                	or     BYTE PTR [ebx],dl
+     ae5:	22 22                	and    ah,BYTE PTR [edx]
+     ae7:	23 22                	and    esp,DWORD PTR [edx]
+     ae9:	22 12                	and    dl,BYTE PTR [edx]
+     aeb:	12 08                	adc    cl,BYTE PTR [eax]
+     aed:	07                   	pop    es
+	...
+     afe:	00 00                	add    BYTE PTR [eax],al
+     b00:	00 01                	add    BYTE PTR [ecx],al
+     b02:	02 02                	add    al,BYTE PTR [edx]
+     b04:	01 00                	add    DWORD PTR [eax],eax
+	...
+     b16:	07                   	pop    es
+     b17:	00 00                	add    BYTE PTR [eax],al
+     b19:	00 00                	add    BYTE PTR [eax],al
+     b1b:	00 07                	add    BYTE PTR [edi],al
+     b1d:	00 00                	add    BYTE PTR [eax],al
+     b1f:	00 00                	add    BYTE PTR [eax],al
+     b21:	01 00                	add    DWORD PTR [eax],eax
+     b23:	00 01                	add    BYTE PTR [ecx],al
+	...
+     b31:	01 00                	add    DWORD PTR [eax],eax
+     b33:	00 01                	add    BYTE PTR [ecx],al
+	...
+     b41:	00 00                	add    BYTE PTR [eax],al
+     b43:	01 00                	add    DWORD PTR [eax],eax
+	...
+     b61:	00 07                	add    BYTE PTR [edi],al
+     b63:	07                   	pop    es
+     b64:	0f 07                	sysret 
+     b66:	07                   	pop    es
+     b67:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     b75:	00 00                	add    BYTE PTR [eax],al
+     b77:	01 01                	add    DWORD PTR [ecx],eax
+	...
+     b8d:	01 01                	add    DWORD PTR [ecx],eax
+     b8f:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     ba1:	00 03                	add    BYTE PTR [ebx],al
+     ba3:	04 04                	add    al,0x4
+     ba5:	02 01                	add    al,BYTE PTR [ecx]
+     ba7:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     bb1:	00 00                	add    BYTE PTR [eax],al
+     bb3:	32 09                	xor    cl,BYTE PTR [ecx]
+     bb5:	04 03                	add    al,0x3
+     bb7:	00 00                	add    BYTE PTR [eax],al
+     bb9:	00 01                	add    BYTE PTR [ecx],al
+     bbb:	06                   	push   es
+     bbc:	09 32                	or     DWORD PTR [edx],esi
+     bbe:	00 00                	add    BYTE PTR [eax],al
+     bc0:	00 00                	add    BYTE PTR [eax],al
+     bc2:	04 04                	add    al,0x4
+     bc4:	04 04                	add    al,0x4
+     bc6:	04 00                	add    al,0x0
+     bc8:	01 02                	add    DWORD PTR [edx],eax
+     bca:	04 08                	add    al,0x8
+     bcc:	10 00                	adc    BYTE PTR [eax],al
+     bce:	00 00                	add    BYTE PTR [eax],al
+     bd0:	00 00                	add    BYTE PTR [eax],al
+     bd2:	04 04                	add    al,0x4
+     bd4:	04 04                	add    al,0x4
+     bd6:	04 00                	add    al,0x0
+     bd8:	01 02                	add    DWORD PTR [edx],eax
+     bda:	04 08                	add    al,0x8
+     bdc:	10 00                	adc    BYTE PTR [eax],al
+     bde:	00 00                	add    BYTE PTR [eax],al
+     be0:	00 00                	add    BYTE PTR [eax],al
+     be2:	0e                   	push   cs
+     be3:	12 06                	adc    al,BYTE PTR [esi]
+     be5:	12 12                	adc    dl,BYTE PTR [edx]
+     be7:	0c 01                	or     al,0x1
+     be9:	02 04 04             	add    al,BYTE PTR [esp+eax*1]
+     bec:	08 00                	or     BYTE PTR [eax],al
+	...
+     bf6:	00 01                	add    BYTE PTR [ecx],al
+     bf8:	03 02                	add    eax,DWORD PTR [edx]
+     bfa:	04 04                	add    al,0x4
+     bfc:	06                   	push   es
+     bfd:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     c5f:	00 00                	add    BYTE PTR [eax],al
+     c61:	00 01                	add    BYTE PTR [ecx],al
+     c63:	01 02                	add    DWORD PTR [edx],eax
+     c65:	02 04 04             	add    al,BYTE PTR [esp+eax*1]
+     c68:	0c 0f                	or     al,0xf
+     c6a:	08 10                	or     BYTE PTR [eax],dl
+     c6c:	10 20                	adc    BYTE PTR [eax],ah
+	...
+     d02:	07                   	pop    es
+     d03:	04 04                	add    al,0x4
+     d05:	04 04                	add    al,0x4
+     d07:	1f                   	pop    ds
+     d08:	04 04                	add    al,0x4
+     d0a:	04 04                	add    al,0x4
+     d0c:	04 07                	add    al,0x7
+	...
+     d72:	00 00                	add    BYTE PTR [eax],al
+     d74:	08 04 02             	or     BYTE PTR [edx+eax*1],al
+     d77:	01 01                	add    DWORD PTR [ecx],eax
+     d79:	03 04 08             	add    eax,DWORD PTR [eax+ecx*1]
+     d7c:	00 00                	add    BYTE PTR [eax],al
+     d7e:	00 00                	add    BYTE PTR [eax],al
+     d80:	00 00                	add    BYTE PTR [eax],al
+     d82:	03 0c 08             	add    ecx,DWORD PTR [eax+ecx*1]
+     d85:	10 10                	adc    BYTE PTR [eax],dl
+     d87:	10 11                	adc    BYTE PTR [ecx],dl
+     d89:	11 12                	adc    DWORD PTR [edx],edx
+     d8b:	0a 04 0b             	or     al,BYTE PTR [ebx+ecx*1]
+     d8e:	08 00                	or     BYTE PTR [eax],al
+	...
+     de0:	00 00                	add    BYTE PTR [eax],al
+     de2:	04 04                	add    al,0x4
+     de4:	07                   	pop    es
+     de5:	04 04                	add    al,0x4
+     de7:	04 04                	add    al,0x4
+     de9:	04 04                	add    al,0x4
+     deb:	07                   	pop    es
+     dec:	04 04                	add    al,0x4
+     dee:	00 00                	add    BYTE PTR [eax],al
+     df0:	00 00                	add    BYTE PTR [eax],al
+     df2:	0f 08                	invd   
+     df4:	08 08                	or     BYTE PTR [eax],cl
+     df6:	08 0f                	or     BYTE PTR [edi],cl
+     df8:	08 08                	or     BYTE PTR [eax],cl
+     dfa:	08 08                	or     BYTE PTR [eax],cl
+     dfc:	0e                   	push   cs
+     dfd:	0b 00                	or     eax,DWORD PTR [eax]
+	...
+     e63:	00 00                	add    BYTE PTR [eax],al
+     e65:	0e                   	push   cs
+     e66:	11 21                	adc    DWORD PTR [ecx],esp
+     e68:	01 1f                	add    DWORD PTR [edi],ebx
+     e6a:	21 21                	and    DWORD PTR [ecx],esp
+     e6c:	23 1c 00             	and    ebx,DWORD PTR [eax+eax*1]
+	...
+     eff:	00 00                	add    BYTE PTR [eax],al
+     f01:	00 01                	add    BYTE PTR [ecx],al
+     f03:	00 01                	add    BYTE PTR [ecx],al
+     f05:	03 04 04             	add    eax,DWORD PTR [esp+eax*1]
+     f08:	08 08                	or     BYTE PTR [eax],cl
+     f0a:	08 04 04             	or     BYTE PTR [esp+eax*1],al
+     f0d:	03 00                	add    eax,DWORD PTR [eax]
+	...
+     f77:	00 0f                	add    BYTE PTR [edi],cl
+	...
+     f85:	03 04 04             	add    eax,DWORD PTR [esp+eax*1]
+     f88:	08 09                	or     BYTE PTR [ecx],cl
+     f8a:	09 05 06 03 04 00    	or     DWORD PTR ds:0x40306,eax
+	...
+     fe0:	00 00                	add    BYTE PTR [eax],al
+     fe2:	04 04                	add    al,0x4
+     fe4:	04 07                	add    al,0x7
+     fe6:	04 04                	add    al,0x4
+     fe8:	04 04                	add    al,0x4
+     fea:	04 04                	add    al,0x4
+     fec:	04 07                	add    al,0x7
+     fee:	04 00                	add    al,0x0
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]

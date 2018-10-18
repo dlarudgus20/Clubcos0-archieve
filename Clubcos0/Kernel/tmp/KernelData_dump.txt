@@ -1,0 +1,60 @@
+
+tmp/KernelData.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <InitKernelData>:
+   0:	83 ec 1c             	sub    esp,0x1c
+   3:	c7 44 24 08 00 02 00 	mov    DWORD PTR [esp+0x8],0x200
+   a:	00 
+   b:	c7 44 24 04 00 00 00 	mov    DWORD PTR [esp+0x4],0x0
+  12:	00 
+  13:	c7 04 24 00 00 00 00 	mov    DWORD PTR [esp],0x0
+  1a:	e8 fc ff ff ff       	call   1b <InitKernelData+0x1b>
+  1f:	83 c4 1c             	add    esp,0x1c
+  22:	c3                   	ret    
+
+Disassembly of section .bss:
+
+00000000 <InterruptQueueBuf>:
+	...
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 14 00             	add    BYTE PTR [eax+eax*1],dl
+  1a:	00 00                	add    BYTE PTR [eax],al
+  1c:	1c 00                	sbb    al,0x0
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	23 00                	and    eax,DWORD PTR [eax]
+  26:	00 00                	add    BYTE PTR [eax],al
+  28:	00 43 0e             	add    BYTE PTR [ebx+0xe],al
+  2b:	20 5f 0e             	and    BYTE PTR [edi+0xe],bl
+  2e:	04 00                	add    al,0x0

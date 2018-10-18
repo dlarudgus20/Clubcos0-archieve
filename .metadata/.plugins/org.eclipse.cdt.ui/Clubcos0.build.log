@@ -1,0 +1,29 @@
+16:35:41 **** Incremental Build of configuration Default for project Clubcos0 ****
+make all 
+make -C Bootsector
+make[1]: Entering directory '/cygdrive/f/Clubcos0/Clubcos0/Bootsector'
+##################################
+# Bootsector makefile
+##################################
+make -r bin/bootsector.bin
+make[2]: Entering directory '/cygdrive/f/Clubcos0/Clubcos0/Bootsector'
+make[2]: 'bin/bootsector.bin' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos0/Clubcos0/Bootsector'
+make[1]: Leaving directory '/cygdrive/f/Clubcos0/Clubcos0/Bootsector'
+make -C Kernel
+make[1]: Entering directory '/cygdrive/f/Clubcos0/Clubcos0/Kernel'
+##################################
+# Kernel makefile
+##################################
+make -r bin/Clubcos0.sys
+make[2]: Entering directory '/cygdrive/f/Clubcos0/Clubcos0/Kernel'
+make[2]: 'bin/Clubcos0.sys' is up to date.
+make[2]: Leaving directory '/cygdrive/f/Clubcos0/Clubcos0/Kernel'
+make[1]: Leaving directory '/cygdrive/f/Clubcos0/Clubcos0/Kernel'
+make -r floppy.img
+make[1]: Entering directory '/cygdrive/f/Clubcos0/Clubcos0'
+make[1]: 'floppy.img' is up to date.
+make[1]: Leaving directory '/cygdrive/f/Clubcos0/Clubcos0'
+
+16:35:42 Build Finished (took 1s.24ms)
+

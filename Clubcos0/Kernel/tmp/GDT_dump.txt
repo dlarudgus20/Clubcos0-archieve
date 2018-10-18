@@ -1,0 +1,93 @@
+
+tmp/GDT.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <InitGdt>:
+   0:	53                   	push   ebx
+   1:	8b 54 24 0c          	mov    edx,DWORD PTR [esp+0xc]
+   5:	8b 44 24 08          	mov    eax,DWORD PTR [esp+0x8]
+   9:	0f b6 5c 24 14       	movzx  ebx,BYTE PTR [esp+0x14]
+   e:	89 d1                	mov    ecx,edx
+  10:	c1 e9 10             	shr    ecx,0x10
+  13:	88 48 04             	mov    BYTE PTR [eax+0x4],cl
+  16:	8b 4c 24 10          	mov    ecx,DWORD PTR [esp+0x10]
+  1a:	66 89 50 02          	mov    WORD PTR [eax+0x2],dx
+  1e:	c1 ea 18             	shr    edx,0x18
+  21:	88 50 07             	mov    BYTE PTR [eax+0x7],dl
+  24:	31 d2                	xor    edx,edx
+  26:	81 f9 fe ff 0f 00    	cmp    ecx,0xffffe
+  2c:	76 08                	jbe    36 <InitGdt+0x36>
+  2e:	c1 e9 0c             	shr    ecx,0xc
+  31:	ba 01 00 00 00       	mov    edx,0x1
+  36:	66 89 08             	mov    WORD PTR [eax],cx
+  39:	c1 e9 10             	shr    ecx,0x10
+  3c:	c1 e2 07             	shl    edx,0x7
+  3f:	83 e1 0f             	and    ecx,0xf
+  42:	09 ca                	or     edx,ecx
+  44:	83 ca 40             	or     edx,0x40
+  47:	88 58 05             	mov    BYTE PTR [eax+0x5],bl
+  4a:	88 50 06             	mov    BYTE PTR [eax+0x6],dl
+  4d:	5b                   	pop    ebx
+  4e:	c3                   	ret    
+  4f:	90                   	nop
+
+00000050 <InitNullGdt>:
+  50:	8b 44 24 04          	mov    eax,DWORD PTR [esp+0x4]
+  54:	c7 00 00 00 00 00    	mov    DWORD PTR [eax],0x0
+  5a:	c7 40 04 00 00 00 00 	mov    DWORD PTR [eax+0x4],0x0
+  61:	c3                   	ret    
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 18                	add    BYTE PTR [eax],bl
+  19:	00 00                	add    BYTE PTR [eax],al
+  1b:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	4f                   	dec    edi
+  25:	00 00                	add    BYTE PTR [eax],al
+  27:	00 00                	add    BYTE PTR [eax],al
+  29:	41                   	inc    ecx
+  2a:	0e                   	push   cs
+  2b:	08 83 02 02 4d c3    	or     BYTE PTR [ebx-0x3cb2fdfe],al
+  31:	0e                   	push   cs
+  32:	04 00                	add    al,0x0
+  34:	10 00                	adc    BYTE PTR [eax],al
+  36:	00 00                	add    BYTE PTR [eax],al
+  38:	38 00                	cmp    BYTE PTR [eax],al
+  3a:	00 00                	add    BYTE PTR [eax],al
+  3c:	50                   	push   eax
+  3d:	00 00                	add    BYTE PTR [eax],al
+  3f:	00 12                	add    BYTE PTR [edx],dl
+  41:	00 00                	add    BYTE PTR [eax],al
+  43:	00 00                	add    BYTE PTR [eax],al
+  45:	00 00                	add    BYTE PTR [eax],al
+	...

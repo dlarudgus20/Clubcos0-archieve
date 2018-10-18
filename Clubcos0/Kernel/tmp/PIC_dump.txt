@@ -1,0 +1,185 @@
+
+tmp/PIC.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <InitPic>:
+   0:	53                   	push   ebx
+   1:	83 ec 18             	sub    esp,0x18
+   4:	e8 fc ff ff ff       	call   5 <InitPic+0x5>
+   9:	89 c3                	mov    ebx,eax
+   b:	e8 fc ff ff ff       	call   c <InitPic+0xc>
+  10:	c7 44 24 04 11 00 00 	mov    DWORD PTR [esp+0x4],0x11
+  17:	00 
+  18:	c7 04 24 20 00 00 00 	mov    DWORD PTR [esp],0x20
+  1f:	e8 fc ff ff ff       	call   20 <InitPic+0x20>
+  24:	c7 44 24 04 20 00 00 	mov    DWORD PTR [esp+0x4],0x20
+  2b:	00 
+  2c:	c7 04 24 21 00 00 00 	mov    DWORD PTR [esp],0x21
+  33:	e8 fc ff ff ff       	call   34 <InitPic+0x34>
+  38:	c7 44 24 04 04 00 00 	mov    DWORD PTR [esp+0x4],0x4
+  3f:	00 
+  40:	c7 04 24 21 00 00 00 	mov    DWORD PTR [esp],0x21
+  47:	e8 fc ff ff ff       	call   48 <InitPic+0x48>
+  4c:	c7 44 24 04 01 00 00 	mov    DWORD PTR [esp+0x4],0x1
+  53:	00 
+  54:	c7 04 24 21 00 00 00 	mov    DWORD PTR [esp],0x21
+  5b:	e8 fc ff ff ff       	call   5c <InitPic+0x5c>
+  60:	c7 44 24 04 11 00 00 	mov    DWORD PTR [esp+0x4],0x11
+  67:	00 
+  68:	c7 04 24 a0 00 00 00 	mov    DWORD PTR [esp],0xa0
+  6f:	e8 fc ff ff ff       	call   70 <InitPic+0x70>
+  74:	c7 44 24 04 28 00 00 	mov    DWORD PTR [esp+0x4],0x28
+  7b:	00 
+  7c:	c7 04 24 a1 00 00 00 	mov    DWORD PTR [esp],0xa1
+  83:	e8 fc ff ff ff       	call   84 <InitPic+0x84>
+  88:	c7 44 24 04 02 00 00 	mov    DWORD PTR [esp+0x4],0x2
+  8f:	00 
+  90:	c7 04 24 a1 00 00 00 	mov    DWORD PTR [esp],0xa1
+  97:	e8 fc ff ff ff       	call   98 <InitPic+0x98>
+  9c:	c7 44 24 04 01 00 00 	mov    DWORD PTR [esp+0x4],0x1
+  a3:	00 
+  a4:	c7 04 24 a1 00 00 00 	mov    DWORD PTR [esp],0xa1
+  ab:	e8 fc ff ff ff       	call   ac <InitPic+0xac>
+  b0:	c7 44 24 04 fb 00 00 	mov    DWORD PTR [esp+0x4],0xfb
+  b7:	00 
+  b8:	c7 04 24 21 00 00 00 	mov    DWORD PTR [esp],0x21
+  bf:	e8 fc ff ff ff       	call   c0 <InitPic+0xc0>
+  c4:	c7 44 24 04 ff 00 00 	mov    DWORD PTR [esp+0x4],0xff
+  cb:	00 
+  cc:	c7 04 24 a1 00 00 00 	mov    DWORD PTR [esp],0xa1
+  d3:	e8 fc ff ff ff       	call   d4 <InitPic+0xd4>
+  d8:	89 1c 24             	mov    DWORD PTR [esp],ebx
+  db:	e8 fc ff ff ff       	call   dc <InitPic+0xdc>
+  e0:	83 c4 18             	add    esp,0x18
+  e3:	5b                   	pop    ebx
+  e4:	c3                   	ret    
+  e5:	8d 74 26 00          	lea    esi,[esi+eiz*1+0x0]
+  e9:	8d bc 27 00 00 00 00 	lea    edi,[edi+eiz*1+0x0]
+
+000000f0 <SetPicInterrupt>:
+  f0:	53                   	push   ebx
+  f1:	83 ec 18             	sub    esp,0x18
+  f4:	0f b7 5c 24 20       	movzx  ebx,WORD PTR [esp+0x20]
+  f9:	c7 04 24 21 00 00 00 	mov    DWORD PTR [esp],0x21
+ 100:	0f b6 c3             	movzx  eax,bl
+ 103:	0f b6 df             	movzx  ebx,bh
+ 106:	89 44 24 04          	mov    DWORD PTR [esp+0x4],eax
+ 10a:	e8 fc ff ff ff       	call   10b <SetPicInterrupt+0x1b>
+ 10f:	89 5c 24 04          	mov    DWORD PTR [esp+0x4],ebx
+ 113:	c7 04 24 a1 00 00 00 	mov    DWORD PTR [esp],0xa1
+ 11a:	e8 fc ff ff ff       	call   11b <SetPicInterrupt+0x2b>
+ 11f:	83 c4 18             	add    esp,0x18
+ 122:	5b                   	pop    ebx
+ 123:	c3                   	ret    
+ 124:	8d b6 00 00 00 00    	lea    esi,[esi+0x0]
+ 12a:	8d bf 00 00 00 00    	lea    edi,[edi+0x0]
+
+00000130 <SendEOI>:
+ 130:	53                   	push   ebx
+ 131:	83 ec 18             	sub    esp,0x18
+ 134:	0f b6 5c 24 20       	movzx  ebx,BYTE PTR [esp+0x20]
+ 139:	80 fb 07             	cmp    bl,0x7
+ 13c:	76 32                	jbe    170 <SendEOI+0x40>
+ 13e:	83 eb 08             	sub    ebx,0x8
+ 141:	83 cb 60             	or     ebx,0x60
+ 144:	c7 44 24 04 62 00 00 	mov    DWORD PTR [esp+0x4],0x62
+ 14b:	00 
+ 14c:	0f b6 db             	movzx  ebx,bl
+ 14f:	c7 04 24 20 00 00 00 	mov    DWORD PTR [esp],0x20
+ 156:	e8 fc ff ff ff       	call   157 <SendEOI+0x27>
+ 15b:	89 5c 24 04          	mov    DWORD PTR [esp+0x4],ebx
+ 15f:	c7 04 24 a0 00 00 00 	mov    DWORD PTR [esp],0xa0
+ 166:	e8 fc ff ff ff       	call   167 <SendEOI+0x37>
+ 16b:	83 c4 18             	add    esp,0x18
+ 16e:	5b                   	pop    ebx
+ 16f:	c3                   	ret    
+ 170:	83 cb 60             	or     ebx,0x60
+ 173:	0f b6 db             	movzx  ebx,bl
+ 176:	89 5c 24 04          	mov    DWORD PTR [esp+0x4],ebx
+ 17a:	c7 04 24 20 00 00 00 	mov    DWORD PTR [esp],0x20
+ 181:	e8 fc ff ff ff       	call   182 <SendEOI+0x52>
+ 186:	83 c4 18             	add    esp,0x18
+ 189:	5b                   	pop    ebx
+ 18a:	c3                   	ret    
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	00 47 43             	add    BYTE PTR [edi+0x43],al
+   3:	43                   	inc    ebx
+   4:	3a 20                	cmp    ah,BYTE PTR [eax]
+   6:	28 47 4e             	sub    BYTE PTR [edi+0x4e],al
+   9:	55                   	push   ebp
+   a:	29 20                	sub    DWORD PTR [eax],esp
+   c:	34 2e                	xor    al,0x2e
+   e:	37                   	aaa    
+   f:	2e 33 00             	xor    eax,DWORD PTR cs:[eax]
+
+Disassembly of section .eh_frame:
+
+00000000 <.eh_frame>:
+   0:	14 00                	adc    al,0x0
+   2:	00 00                	add    BYTE PTR [eax],al
+   4:	00 00                	add    BYTE PTR [eax],al
+   6:	00 00                	add    BYTE PTR [eax],al
+   8:	01 7a 52             	add    DWORD PTR [edx+0x52],edi
+   b:	00 01                	add    BYTE PTR [ecx],al
+   d:	7c 08                	jl     17 <.eh_frame+0x17>
+   f:	01 1b                	add    DWORD PTR [ebx],ebx
+  11:	0c 04                	or     al,0x4
+  13:	04 88                	add    al,0x88
+  15:	01 00                	add    DWORD PTR [eax],eax
+  17:	00 20                	add    BYTE PTR [eax],ah
+  19:	00 00                	add    BYTE PTR [eax],al
+  1b:	00 1c 00             	add    BYTE PTR [eax+eax*1],bl
+  1e:	00 00                	add    BYTE PTR [eax],al
+  20:	00 00                	add    BYTE PTR [eax],al
+  22:	00 00                	add    BYTE PTR [eax],al
+  24:	e5 00                	in     eax,0x0
+  26:	00 00                	add    BYTE PTR [eax],al
+  28:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+  2b:	08 83 02 43 0e 20    	or     BYTE PTR [ebx+0x200e4302],al
+  31:	02 df                	add    bl,bh
+  33:	0e                   	push   cs
+  34:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  37:	0e                   	push   cs
+  38:	04 00                	add    al,0x0
+  3a:	00 00                	add    BYTE PTR [eax],al
+  3c:	1c 00                	sbb    al,0x0
+  3e:	00 00                	add    BYTE PTR [eax],al
+  40:	40                   	inc    eax
+  41:	00 00                	add    BYTE PTR [eax],al
+  43:	00 f0                	add    al,dh
+  45:	00 00                	add    BYTE PTR [eax],al
+  47:	00 34 00             	add    BYTE PTR [eax+eax*1],dh
+  4a:	00 00                	add    BYTE PTR [eax],al
+  4c:	00 41 0e             	add    BYTE PTR [ecx+0xe],al
+  4f:	08 83 02 43 0e 20    	or     BYTE PTR [ebx+0x200e4302],al
+  55:	6e                   	outs   dx,BYTE PTR ds:[esi]
+  56:	0e                   	push   cs
+  57:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  5a:	0e                   	push   cs
+  5b:	04 28                	add    al,0x28
+  5d:	00 00                	add    BYTE PTR [eax],al
+  5f:	00 60 00             	add    BYTE PTR [eax+0x0],ah
+  62:	00 00                	add    BYTE PTR [eax],al
+  64:	30 01                	xor    BYTE PTR [ecx],al
+  66:	00 00                	add    BYTE PTR [eax],al
+  68:	5b                   	pop    ebx
+  69:	00 00                	add    BYTE PTR [eax],al
+  6b:	00 00                	add    BYTE PTR [eax],al
+  6d:	41                   	inc    ecx
+  6e:	0e                   	push   cs
+  6f:	08 83 02 43 0e 20    	or     BYTE PTR [ebx+0x200e4302],al
+  75:	7a 0a                	jp     81 <.eh_frame+0x81>
+  77:	0e                   	push   cs
+  78:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  7b:	0e                   	push   cs
+  7c:	04 41                	add    al,0x41
+  7e:	0b 59 0e             	or     ebx,DWORD PTR [ecx+0xe]
+  81:	08 41 c3             	or     BYTE PTR [ecx-0x3d],al
+  84:	0e                   	push   cs
+  85:	04 00                	add    al,0x0
+	...

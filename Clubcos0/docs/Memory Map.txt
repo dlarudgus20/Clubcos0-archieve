@@ -1,0 +1,7 @@
+0x000000 ~ 0x100000 (1MB)		: no use.
+0x100000 ~ 0x268000 (2.44MB)	: Floppy Image
+0x268000 ~ 0x500000 (5MB)		: Kernel Stack
+0x500000 ~ 0x600000 (6MB)		: Kernel
+0x600000 ~ 0x620000				: GDT
+0x620000 ~ 0x620800				: IDT
+0x700000 ~ 0x30000000 (3GB)		: Dynamic Memory Area
